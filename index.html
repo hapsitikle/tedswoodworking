@@ -1665,10 +1665,33 @@
             button.setAttribute('href', hoplink);
             
             // Add click event listener for Taboola pixel tracking
-            button.addEventListener('click', function() {
-                // Taboola conversion tracking
+            button.addEventListener('click', function(e) {
+                // Determine the specific conversion event based on button text/context
+                let eventName = 'button_click'; // Default event name
+                let eventValue = '0';
+                
+                // Set specific event names based on button text for better tracking
+                if (button.textContent.includes('Get Instant Access')) {
+                    eventName = 'purchase_click';
+                    eventValue = '67'; // The price value
+                } else if (button.textContent.includes('Watch')) {
+                    eventName = 'workshop_click';
+                } else if (button.textContent.includes('BLUEPRINT')) {
+                    eventName = 'blueprint_click';
+                }
+                
+                // Taboola conversion tracking with specific event names
                 if (window._tfa && typeof window._tfa.push === 'function') {
-                    window._tfa.push({notify: 'event', name: 'button_click', id: 1833931});
+                    window._tfa.push({
+                        notify: 'event', 
+                        name: eventName, 
+                        id: 1833931,
+                        // Additional parameters for better tracking
+                        value: eventValue,
+                        item_id: 'tedsplans',
+                        category: 'woodworking'
+                    });
+                    console.log('Conversion tracked:', eventName);
                 }
             });
         });
@@ -1693,13 +1716,78 @@
         const playButton = document.querySelector('.play-button');
         if (playButton) {
             playButton.addEventListener('click', function() {
-                // Add Taboola pixel tracking for video play button
+                // Add Taboola pixel tracking for video play button with specific event name
                 if (window._tfa && typeof window._tfa.push === 'function') {
-                    window._tfa.push({notify: 'event', name: 'button_click', id: 1833931});
+                    window._tfa.push({
+                        notify: 'event', 
+                        name: 'video_play', 
+                        id: 1833931,
+                        item_id: 'tedsplans_video',
+                        category: 'woodworking'
+                    });
+                    console.log('Conversion tracked: video_play');
                 }
                 alert('Video would play here. In the actual implementation, this would load Ted\'s workshop video.');
             });
         }
+        
+        // Track page scroll depth for engagement measurement
+        let scrollDepthTracked = {
+            '25': false,
+            '50': false,
+            '75': false,
+            '100': false
+        };
+        
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercentage = Math.round((scrollPosition / totalHeight) * 100);
+            
+            // Track at 25%, 50%, 75% and 100% scroll depth
+            if (scrollPercentage >= 25 && !scrollDepthTracked['25']) {
+                trackScrollDepth('25');
+                scrollDepthTracked['25'] = true;
+            }
+            if (scrollPercentage >= 50 && !scrollDepthTracked['50']) {
+                trackScrollDepth('50');
+                scrollDepthTracked['50'] = true;
+            }
+            if (scrollPercentage >= 75 && !scrollDepthTracked['75']) {
+                trackScrollDepth('75');
+                scrollDepthTracked['75'] = true;
+            }
+            if (scrollPercentage >= 100 && !scrollDepthTracked['100']) {
+                trackScrollDepth('100');
+                scrollDepthTracked['100'] = true;
+            }
+        });
+        
+        function trackScrollDepth(depth) {
+            if (window._tfa && typeof window._tfa.push === 'function') {
+                window._tfa.push({
+                    notify: 'event', 
+                    name: 'scroll_depth_' + depth, 
+                    id: 1833931
+                });
+                console.log('Scroll depth tracked:', depth + '%');
+            }
+        }
+        
+        // Track time spent on page
+        const timeIntervals = [30, 60, 120, 180, 300]; // in seconds
+        timeIntervals.forEach(interval => {
+            setTimeout(function() {
+                if (window._tfa && typeof window._tfa.push === 'function') {
+                    window._tfa.push({
+                        notify: 'event', 
+                        name: 'time_on_page_' + interval + 's', 
+                        id: 1833931
+                    });
+                    console.log('Time on page tracked:', interval + ' seconds');
+                }
+            }, interval * 1000);
+        });
       });
     </script>
 </body>
