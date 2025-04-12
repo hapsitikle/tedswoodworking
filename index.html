@@ -113,9 +113,16 @@
         .header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            width:100%;
             z-index: 100;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header--hidden {
+            transform: translateY(-100%);
         }
         
         .header .container {
@@ -904,6 +911,8 @@
         @media (max-width: 768px) {
             body {
                 font-size: 16px;
+                paddint-top: 80px;
+                padding-top: 120px;
             }
             
             h1 {
@@ -1558,216 +1567,264 @@
 
     <script>
         // Simple timer countdown functionality
-        function updateTimer() {
-            const days = document.querySelector('.timer-segment:nth-child(1) .timer-value');
-            const hours = document.querySelector('.timer-segment:nth-child(2) .timer-value');
-            const minutes = document.querySelector('.timer-segment:nth-child(3) .timer-value');
-            const seconds = document.querySelector('.timer-segment:nth-child(4) .timer-value');
+function updateTimer() {
+    const days = document.querySelector('.timer-segment:nth-child(1) .timer-value');
+    const hours = document.querySelector('.timer-segment:nth-child(2) .timer-value');
+    const minutes = document.querySelector('.timer-segment:nth-child(3) .timer-value');
+    const seconds = document.querySelector('.timer-segment:nth-child(4) .timer-value');
+    
+    if (!days || !hours || !minutes || !seconds) return;
+    
+    let secondsValue = parseInt(seconds.textContent);
+    let minutesValue = parseInt(minutes.textContent);
+    let hoursValue = parseInt(hours.textContent);
+    let daysValue = parseInt(days.textContent);
+    
+    secondsValue--;
+    
+    if (secondsValue < 0) {
+        secondsValue = 59;
+        minutesValue--;
+        
+        if (minutesValue < 0) {
+            minutesValue = 59;
+            hoursValue--;
             
-            if (!days || !hours || !minutes || !seconds) return;
-            
-            let secondsValue = parseInt(seconds.textContent);
-            let minutesValue = parseInt(minutes.textContent);
-            let hoursValue = parseInt(hours.textContent);
-            let daysValue = parseInt(days.textContent);
-            
-            secondsValue--;
-            
-            if (secondsValue < 0) {
-                secondsValue = 59;
-                minutesValue--;
+            if (hoursValue < 0) {
+                hoursValue = 23;
+                daysValue--;
                 
-                if (minutesValue < 0) {
-                    minutesValue = 59;
-                    hoursValue--;
-                    
-                    if (hoursValue < 0) {
-                        hoursValue = 23;
-                        daysValue--;
-                        
-                        if (daysValue < 0) {
-                            daysValue = 0;
-                            hoursValue = 0;
-                            minutesValue = 0;
-                            secondsValue = 0;
-                        }
-                    }
+                if (daysValue < 0) {
+                    daysValue = 0;
+                    hoursValue = 0;
+                    minutesValue = 0;
+                    secondsValue = 0;
                 }
             }
-            
-            seconds.textContent = secondsValue.toString().padStart(2, '0');
-            minutes.textContent = minutesValue.toString().padStart(2, '0');
-            hours.textContent = hoursValue.toString();
-            days.textContent = daysValue.toString();
-            
-            setTimeout(updateTimer, 1000);
         }
-        
-        // Back to top button visibility
-        function toggleBackToTopButton() {
-            const backToTopButton = document.querySelector('.back-to-top');
-            if (!backToTopButton) return;
+    }
+    
+    seconds.textContent = secondsValue.toString().padStart(2, '0');
+    minutes.textContent = minutesValue.toString().padStart(2, '0');
+    hours.textContent = hoursValue.toString();
+    days.textContent = daysValue.toString();
+    
+    setTimeout(updateTimer, 1000);
+}
+
+// Back to top button visibility
+function toggleBackToTopButton() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    if (!backToTopButton) return;
+    
+    if (window.scrollY > 500) {
+        backToTopButton.style.opacity = '1';
+    } else {
+        backToTopButton.style.opacity = '0';
+    }
+}
+
+// Add smooth scrolling to all links
+function setupSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
             
-            if (window.scrollY > 500) {
-                backToTopButton.style.opacity = '1';
-            } else {
-                backToTopButton.style.opacity = '0';
-            }
-        }
-        
-        // Add smooth scrolling to all links
-        function setupSmoothScrolling() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const target = document.querySelector(this.getAttribute('href'));
-                    
-                    if (target) {
-                        const headerHeight = document.querySelector('.header').offsetHeight;
-                        window.scrollTo({
-                            top: target.offsetTop - headerHeight,
-                            behavior: 'smooth'
-                        });
-                    }
+            const target = document.querySelector(this.getAttribute('href'));
+            
+            if (target) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                window.scrollTo({
+                    top: target.offsetTop - headerHeight,
+                    behavior: 'smooth'
                 });
-            });
-        }
-        
-      document.addEventListener('DOMContentLoaded', function() {
-        // Update ALL buttons to link to the ClickBank hoplink and add Taboola tracking
-        const ctaButtons = document.querySelectorAll('.button');
-        const hoplink = 'https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans';
-        
-        ctaButtons.forEach(button => {
-            // Set all buttons to use the hoplink
-            button.setAttribute('href', hoplink);
-            
-            // Add click event listener for Taboola pixel tracking
-            button.addEventListener('click', function(e) {
-                // Determine the specific conversion event based on button text/context
-                let eventName = 'button_click'; // Default event name
-                let eventValue = '0';
-                
-                // Set specific event names based on button text for better tracking
-                if (button.textContent.includes('Get Instant Access')) {
-                    eventName = 'purchase_click';
-                    eventValue = '67'; // The price value
-                } else if (button.textContent.includes('Watch')) {
-                    eventName = 'workshop_click';
-                } else if (button.textContent.includes('BLUEPRINT')) {
-                    eventName = 'blueprint_click';
-                }
-                
-                // Taboola conversion tracking with specific event names
-                if (window._tfa && typeof window._tfa.push === 'function') {
-                    window._tfa.push({
-                        notify: 'event', 
-                        name: eventName, 
-                        id: 1833931,
-                        // Additional parameters for better tracking
-                        value: eventValue,
-                        item_id: 'tedsplans',
-                        category: 'woodworking'
-                    });
-                    console.log('Conversion tracked:', eventName);
-                }
-            });
-        });
-      
-        // Handle mobile navigation
-        function setupMobileNav() {
-            const header = document.querySelector('.header');
-            if (!header) return;
-        }
-        
-        // Initialize
-        updateTimer();
-        setupMobileNav();
-        setupSmoothScrolling();
-        
-        window.addEventListener('scroll', toggleBackToTopButton);
-        toggleBackToTopButton();
-        
-        window.addEventListener('resize', setupMobileNav);
-        
-        // Simulate video play button click
-        const playButton = document.querySelector('.play-button');
-        if (playButton) {
-            playButton.addEventListener('click', function() {
-                // Add Taboola pixel tracking for video play button with specific event name
-                if (window._tfa && typeof window._tfa.push === 'function') {
-                    window._tfa.push({
-                        notify: 'event', 
-                        name: 'video_play', 
-                        id: 1833931,
-                        item_id: 'tedsplans_video',
-                        category: 'woodworking'
-                    });
-                    console.log('Conversion tracked: video_play');
-                }
-                alert('Video would play here. In the actual implementation, this would load Ted\'s workshop video.');
-            });
-        }
-        
-        // Track page scroll depth for engagement measurement
-        let scrollDepthTracked = {
-            '25': false,
-            '50': false,
-            '75': false,
-            '100': false
-        };
-        
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const totalHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercentage = Math.round((scrollPosition / totalHeight) * 100);
-            
-            // Track at 25%, 50%, 75% and 100% scroll depth
-            if (scrollPercentage >= 25 && !scrollDepthTracked['25']) {
-                trackScrollDepth('25');
-                scrollDepthTracked['25'] = true;
-            }
-            if (scrollPercentage >= 50 && !scrollDepthTracked['50']) {
-                trackScrollDepth('50');
-                scrollDepthTracked['50'] = true;
-            }
-            if (scrollPercentage >= 75 && !scrollDepthTracked['75']) {
-                trackScrollDepth('75');
-                scrollDepthTracked['75'] = true;
-            }
-            if (scrollPercentage >= 100 && !scrollDepthTracked['100']) {
-                trackScrollDepth('100');
-                scrollDepthTracked['100'] = true;
             }
         });
+    });
+}
+
+// Smart scroll header functionality
+function setupSmartHeader() {
+    const header = document.getElementById('smart-header');
+    if (!header) return;
+    
+    let lastScrollY = window.scrollY;
+    let scrollingDown = false;
+    
+    function handleHeaderVisibility() {
+        const currentScrollY = window.scrollY;
         
-        function trackScrollDepth(depth) {
+        // Determine scroll direction
+        scrollingDown = currentScrollY > lastScrollY;
+        
+        // Minimum scroll threshold before hiding header
+        const scrollThreshold = 50;
+        
+        // Show header when at the top of the page
+        if (currentScrollY <= 0) {
+            header.classList.remove('header--hidden');
+        }
+        // Hide header when scrolling down and past threshold
+        else if (scrollingDown && currentScrollY > scrollThreshold) {
+            header.classList.add('header--hidden');
+        }
+        // Show header when scrolling up
+        else if (!scrollingDown) {
+            header.classList.remove('header--hidden');
+        }
+        
+        // Update last scroll position
+        lastScrollY = currentScrollY;
+    }
+    
+    // Throttle the scroll event to improve performance
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleHeaderVisibility();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Update ALL buttons to link to the ClickBank hoplink and add Taboola tracking
+    const ctaButtons = document.querySelectorAll('.button');
+    const hoplink = 'https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans';
+    
+    ctaButtons.forEach(button => {
+        // Set all buttons to use the hoplink
+        button.setAttribute('href', hoplink);
+        
+        // Add click event listener for Taboola pixel tracking
+        button.addEventListener('click', function(e) {
+            // Determine the specific conversion event based on button text/context
+            let eventName = 'button_click'; // Default event name
+            let eventValue = '0';
+            
+            // Set specific event names based on button text for better tracking
+            if (button.textContent.includes('Get Instant Access')) {
+                eventName = 'purchase_click';
+                eventValue = '67'; // The price value
+            } else if (button.textContent.includes('Watch')) {
+                eventName = 'workshop_click';
+            } else if (button.textContent.includes('BLUEPRINT')) {
+                eventName = 'blueprint_click';
+            }
+            
+            // Taboola conversion tracking with specific event names
             if (window._tfa && typeof window._tfa.push === 'function') {
                 window._tfa.push({
                     notify: 'event', 
-                    name: 'scroll_depth_' + depth, 
+                    name: eventName, 
+                    id: 1833931,
+                    // Additional parameters for better tracking
+                    value: eventValue,
+                    item_id: 'tedsplans',
+                    category: 'woodworking'
+                });
+                console.log('Conversion tracked:', eventName);
+            }
+        });
+    });
+  
+    // Handle mobile navigation
+    function setupMobileNav() {
+        const header = document.querySelector('.header');
+        if (!header) return;
+    }
+    
+    // Initialize
+    updateTimer();
+    setupMobileNav();
+    setupSmoothScrolling();
+    setupSmartHeader(); // Initialize smart header functionality
+    
+    window.addEventListener('scroll', toggleBackToTopButton);
+    toggleBackToTopButton();
+    
+    window.addEventListener('resize', setupMobileNav);
+    
+    // Simulate video play button click
+    const playButton = document.querySelector('.play-button');
+    if (playButton) {
+        playButton.addEventListener('click', function() {
+            // Add Taboola pixel tracking for video play button with specific event name
+            if (window._tfa && typeof window._tfa.push === 'function') {
+                window._tfa.push({
+                    notify: 'event', 
+                    name: 'video_play', 
+                    id: 1833931,
+                    item_id: 'tedsplans_video',
+                    category: 'woodworking'
+                });
+                console.log('Conversion tracked: video_play');
+            }
+            alert('Video would play here. In the actual implementation, this would load Ted\'s workshop video.');
+        });
+    }
+    
+    // Track page scroll depth for engagement measurement
+    let scrollDepthTracked = {
+        '25': false,
+        '50': false,
+        '75': false,
+        '100': false
+    };
+    
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = Math.round((scrollPosition / totalHeight) * 100);
+        
+        // Track at 25%, 50%, 75% and 100% scroll depth
+        if (scrollPercentage >= 25 && !scrollDepthTracked['25']) {
+            trackScrollDepth('25');
+            scrollDepthTracked['25'] = true;
+        }
+        if (scrollPercentage >= 50 && !scrollDepthTracked['50']) {
+            trackScrollDepth('50');
+            scrollDepthTracked['50'] = true;
+        }
+        if (scrollPercentage >= 75 && !scrollDepthTracked['75']) {
+            trackScrollDepth('75');
+            scrollDepthTracked['75'] = true;
+        }
+        if (scrollPercentage >= 100 && !scrollDepthTracked['100']) {
+            trackScrollDepth('100');
+            scrollDepthTracked['100'] = true;
+        }
+    });
+    
+    function trackScrollDepth(depth) {
+        if (window._tfa && typeof window._tfa.push === 'function') {
+            window._tfa.push({
+                notify: 'event', 
+                name: 'scroll_depth_' + depth, 
+                id: 1833931
+            });
+            console.log('Scroll depth tracked:', depth + '%');
+        }
+    }
+    
+    // Track time spent on page
+    const timeIntervals = [30, 60, 120, 180, 300]; // in seconds
+    timeIntervals.forEach(interval => {
+        setTimeout(function() {
+            if (window._tfa && typeof window._tfa.push === 'function') {
+                window._tfa.push({
+                    notify: 'event', 
+                    name: 'time_on_page_' + interval + 's', 
                     id: 1833931
                 });
-                console.log('Scroll depth tracked:', depth + '%');
+                console.log('Time on page tracked:', interval + ' seconds');
             }
-        }
-        
-        // Track time spent on page
-        const timeIntervals = [30, 60, 120, 180, 300]; // in seconds
-        timeIntervals.forEach(interval => {
-            setTimeout(function() {
-                if (window._tfa && typeof window._tfa.push === 'function') {
-                    window._tfa.push({
-                        notify: 'event', 
-                        name: 'time_on_page_' + interval + 's', 
-                        id: 1833931
-                    });
-                    console.log('Time on page tracked:', interval + ' seconds');
-                }
-            }, interval * 1000);
-        });
-      });
+        }, interval * 1000);
+    });
+});
     </script>
 </body>
 </html>
