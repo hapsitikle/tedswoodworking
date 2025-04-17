@@ -1067,32 +1067,58 @@
     <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
 
     <script>
-        // Simple JavaScript to track engagement events that could be expanded later
-        document.addEventListener('DOMContentLoaded', function() {
-            // Track CTA clicks
-            const ctaButtons = document.querySelectorAll('.button');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    console.log('CTA clicked: ' + this.textContent.trim());
-                    // Here you could add proper analytics tracking
-                });
-            });
-            
-            // Track video play button click
-            const playButton = document.querySelector('.play-button');
-            if (playButton) {
-                playButton.addEventListener('click', function(e) {
-                    console.log('Video play button clicked');
-                    // Here you would redirect to the VSL page
-                    window.location.href = "https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans";
-                });
-            }
-            
-            // Scroll event listener for potential future tracking
-            window.addEventListener('scroll', function() {
-                // Scroll tracking removed as requested
+    // JavaScript to track engagement events and Taboola conversions
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track CTA clicks with delayed redirection
+        const ctaButtons = document.querySelectorAll('.button');
+        ctaButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Prevent default action
+                e.preventDefault();
+                
+                console.log('CTA clicked: ' + this.textContent.trim());
+                
+                // Get the destination URL
+                const destinationUrl = this.getAttribute('href');
+                
+                // Add Taboola conversion tracking
+                if (window._tfa) {
+                    window._tfa.push({notify: 'event', name: 'Lead', id: 1833931});
+                    console.log('Taboola Lead conversion tracked');
+                }
+                
+                // Wait a short moment for tracking to complete, then redirect
+                setTimeout(function() {
+                    window.location.href = destinationUrl;
+                }, 200); // 200ms delay
             });
         });
-    </script>
+        
+        // Track video play button click with delayed redirection
+        const playButton = document.querySelector('.play-button');
+        if (playButton) {
+            playButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Video play button clicked');
+                
+                // Add Taboola conversion tracking
+                if (window._tfa) {
+                    window._tfa.push({notify: 'event', name: 'Lead', id: 1833931});
+                    console.log('Taboola Lead conversion tracked');
+                }
+                
+                // Redirect after a short delay
+                setTimeout(function() {
+                    window.location.href = "https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans";
+                }, 200);
+            });
+        }
+        
+        // Scroll event listener for potential future tracking
+        window.addEventListener('scroll', function() {
+            // Scroll tracking removed as requested
+        });
+    });
+</script>
 </body>
 </html>
