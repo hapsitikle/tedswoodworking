@@ -436,49 +436,62 @@
             color: var(--primary);
         }
         
-        /* Project Grid */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
-        
+       
         .project-card {
             background-color: white;
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--box-shadow);
             transition: transform 0.3s;
+            width: 100%;
         }
-        
+       
         .project-card:hover {
             transform: translateY(-5px);
         }
-        
+       
         .project-image {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
         }
-        
+       
         .project-details {
-            padding: 1.2rem;
+            padding: 1.5rem;
         }
-        
+       
         .project-details h3 {
             margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--walnut);
         }
-        
+       
         .project-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--text-medium);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+       
+        .project-meta span {
+            display: flex;
+            align-items: center;
+        }
+       
+        .project-meta span:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
         }
         
         /* Video Container */
@@ -823,18 +836,45 @@
             <h3>Projects You Can Build This Weekend:</h3>
             
             <div class="project-grid">
-                <div class="project-card">
-                    <img src="https://source.unsplash.com/random/400x300/?desk,wood" alt="Computer Desk" class="project-image">
-                    <div class="project-details">
-                        <h3>Computer Desk</h3>
-                        <div class="project-meta">
-                            <span>8-10 hours</span>
-                            <span>Intermediate</span>
+                        <div class="project-card">
+                            <img src="images/cropped-wooden bench.jpg" alt="Farmhouse Bench" class="project-image">
+                            <div class="project-details">
+                                <h3>Farmhouse Bench</h3>
+                                <div class="project-meta">
+                                    <span class="time">4-6 hours</span>
+                                    <span class="difficulty">Beginner</span>
+                                    <span class="cost">$25-40</span>
+                                </div>
+                                <p>Perfect for entryways or dining tables. Looks like custom furniture at a fraction of the cost.</p>
+                            </div>
                         </div>
-                        <p>Custom-sized to fit your space perfectly with built-in cable management.</p>
+                       
+                        <div class="project-card">
+                            <img src="images/cropped-floating shelves.jpg" alt="Floating Shelves" class="project-image">
+                            <div class="project-details">
+                                <h3>Floating Shelves</h3>
+                                <div class="project-meta">
+                                    <span class="time">2-3 hours</span>
+                                    <span class="difficulty">Beginner</span>
+                                    <span class="cost">$15-30</span>
+                                </div>
+                                <p>Elegant storage that looks like it costs hundreds but can be built in an afternoon.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="project-card">
+                            <img src="images/cropped-jewelry box.jpg" alt="Heirloom Jewelry Box" class="project-image">
+                            <div class="project-details">
+                                <h3>Heirloom Jewelry Box</h3>
+                                <div class="project-meta">
+                                    <span class="time">6-8 hours</span>
+                                    <span class="difficulty">Intermediate</span>
+                                    <span class="cost">$30-50</span>
+                                </div>
+                                <p>A perfect gift that will be cherished for generations—built in a single weekend.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
             
             <p style="text-align: center; margin-top: 2rem;">
                 <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="button">Watch The Free Workshop & Get Your First Project Blueprint</a>
