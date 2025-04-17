@@ -803,10 +803,11 @@
             .compare-table td {
                 display: block;
                 text-align: right;
-                padding: 10px 15px;
-                padding-left: 50%; /* Add space for labels */
+                padding: 12px 15px;
+                padding-left: 45%; /* Adjusted space for labels */
                 position: relative;
                 border-bottom: 1px solid #eee;
+                min-height: 48px; /* Ensure consistent height */
             }
             
             /* Add a data label before each cell */
@@ -814,10 +815,12 @@
                 content: attr(data-label);
                 position: absolute;
                 left: 15px;
-                width: 45%; /* Control width of label */
+                width: 40%; /* Control width of label */
                 font-weight: bold;
                 text-align: left;
                 color: var(--dark-wood);
+                top: 50%; /* Center vertically */
+                transform: translateY(-50%);
             }
             
             /* Special styling for the feature name */
@@ -827,7 +830,8 @@
                 text-align: center;
                 font-weight: bold;
                 border-radius: var(--border-radius) var(--border-radius) 0 0;
-                padding-left: 15px; /* Reset padding for feature name cell */
+                padding: 15px;
+                font-size: 1.1rem;
             }
             
             .compare-table td:first-child:before {
@@ -847,6 +851,23 @@
                 background-color: #f0f0f0;
                 border-radius: 0 0 var(--border-radius) var(--border-radius);
                 border-bottom: none;
+            }
+            
+            /* Fix alignment of check/x marks */
+            .compare-check, .compare-x {
+                display: inline-block;
+                margin-right: 4px;
+                min-width: 16px;
+                text-align: center;
+            }
+            
+            /* Fix TedsWoodworking cell styling */
+            .compare-table td:nth-child(4) {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                text-align: right;
+                padding-right: 15px;
             }
         }
         
@@ -907,6 +928,33 @@
             .featured-logo {
                 height: 50px;
                 max-width: 100%;
+            }
+            /* Additional mobile fixes for small screens */
+            .compare-table td {
+                padding-left: 40%; /* Reduced padding for very small screens */
+                word-break: break-word; /* Ensure text wraps properly */
+            }
+            
+            .compare-table td:before {
+                width: 35%; /* Slightly narrower label width on very small screens */
+            }
+            
+            /* Adjust card styling for better mobile appearance */
+            .project-card {
+                margin-bottom: 1rem;
+            }
+            
+            /* Fix spacing in comparison table */
+            .compare-table td:nth-child(4) {
+                display: flex;
+                align-items: center;
+                min-height: 52px;
+            }
+            
+            /* Fix for feature name centering */
+            .compare-table td:first-child {
+                min-height: auto;
+                padding: 12px;
             }
         }
     </style>
