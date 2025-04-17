@@ -530,36 +530,38 @@
         }
         
         .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 70px;
-            height: 70px;
-            background-color: rgba(212, 161, 80, 0.9);
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s;
-        }
-        
-        .play-button:after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 15px 0 15px 26px;
-            border-color: transparent transparent transparent white;
-            margin-left: 5px;
-        }
-        
-        .play-button:hover {
-            background-color: var(--primary);
-            transform: translate(-50%, -50%) scale(1.1);
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: rgba(161, 58, 58, 0.9); /* Darker color using your --primary variable */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    /* Adding a subtle outline to make it stand out more */
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.play-button:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 26px;
+    border-color: transparent transparent transparent white;
+    margin-left: 5px;
+}
+
+.play-button:hover {
+    background-color: var(--primary);
+    transform: translate(-50%, -50%) scale(1.1);
+}
         
         /* Trust Badges */
         .trust-badges {
