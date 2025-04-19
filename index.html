@@ -180,34 +180,22 @@
             margin: 40px 0;
         }
 
-        .urgency-image-container {
-            position: relative;
-            margin: 30px 0;
+        .countdown-container {
+            margin: 30px auto;
             text-align: center;
-        }
-        
-        .urgency-image {
-            opacity: 0.9;
-            display: block;
-        }
-        
-        .countdown-overlay {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: rgba(215, 60, 46, 0.9);
-            color: white;
-            padding: 15px;
+            background-color: rgba(215, 137, 46, 0.15);
+            color: var(--primary-color);
+            padding: 20px;
             border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 2px solid white;
+            max-width: 400px;
+            border: 2px dashed var(--secondary-color);
         }
         
         .countdown-title {
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            color: var(--primary-color);
         }
         
         .countdown-timer {
@@ -217,15 +205,16 @@
         }
         
         .countdown-box {
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: var(--primary-color);
+            color: white;
             border-radius: 4px;
             padding: 8px;
-            margin: 0 4px;
-            min-width: 50px;
+            margin: 0 8px;
+            min-width: 60px;
         }
         
         .countdown-value {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             line-height: 1;
         }
@@ -373,7 +362,7 @@
         }
         
         /* Mobile Responsiveness */
-        @media (max-width: 768px) {
+                    @media (max-width: 768px) {
             body {
                 font-size: 16px;
             }
@@ -416,24 +405,23 @@
                 font-size: 18px;
             }
             
-            .countdown-overlay {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                padding: 10px;
+            .countdown-container {
+                max-width: 90%;
+                padding: 15px;
             }
             
             .countdown-title {
-                font-size: 14px;
+                font-size: 16px;
             }
             
             .countdown-box {
-                padding: 5px;
-                min-width: 40px;
+                padding: 6px;
+                min-width: 50px;
+                margin: 0 4px;
             }
             
             .countdown-value {
-                font-size: 18px;
+                font-size: 22px;
             }
             
             .countdown-label {
@@ -639,23 +627,20 @@
                 <p>This could disappear very soon.</p>
             </div>
             
-            <div class="urgency-image-container">
-                <img class="urgency-image" src="images/cropped-hero section.jpg" style="width: 700px; height: 350px" alt="Ted in workshop with countdown timer" />
-                <div class="countdown-overlay">
-                    <div class="countdown-title">OFFER EXPIRES IN:</div>
-                    <div class="countdown-timer">
-                        <div class="countdown-box">
-                            <div class="countdown-value" id="days">05</div>
-                            <div class="countdown-label">days</div>
-                        </div>
-                        <div class="countdown-box">
-                            <div class="countdown-value" id="hours">12</div>
-                            <div class="countdown-label">hours</div>
-                        </div>
-                        <div class="countdown-box">
-                            <div class="countdown-value" id="minutes">33</div>
-                            <div class="countdown-label">mins</div>
-                        </div>
+            <div class="countdown-container">
+                <div class="countdown-title">OFFER EXPIRES IN:</div>
+                <div class="countdown-timer">
+                    <div class="countdown-box">
+                        <div class="countdown-value" id="days">05</div>
+                        <div class="countdown-label">days</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-value" id="hours">12</div>
+                        <div class="countdown-label">hours</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-value" id="minutes">32</div>
+                        <div class="countdown-label">mins</div>
                     </div>
                 </div>
             </div>
