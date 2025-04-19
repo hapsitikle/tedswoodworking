@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ted's Woodworking Blueprint Vault - Transform Your Woodworking Skills</title>
+    <!-- Taboola Pixel Code -->
+    <script type='text/javascript'>
+      window._tfa = window._tfa || [];
+      window._tfa.push({notify: 'event', name: 'page_view', id: 1833931});
+      !function (t, f, a, x) {
+             if (!document.getElementById(x)) {
+                t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
+             }
+      }(document.createElement('script'),
+      document.getElementsByTagName('script')[0],
+      '//cdn.taboola.com/libtrc/unip/1833931/tfa.js',
+      'tb_tfa_script');
+    </script>
+    <!-- End of Taboola Pixel Code -->
     <style>
         :root {
             --primary-color: #5d4037; /* Rich brown */
@@ -68,17 +82,6 @@
             font-weight: normal;
             margin-bottom: 20px;
             font-style: italic;
-        }
-
-        .first-line {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--secondary-color);
-            background-color: rgba(255, 255, 255, 0.9);
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 4px;
-            margin-top: 10px;
         }
         
         /* Content Sections */
@@ -311,6 +314,13 @@
             text-align: center;
         }
         
+        .image-caption {
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
+        }
         
         /* Benefits & Features */
         .benefits {
@@ -421,10 +431,6 @@
                 font-size: 18px;
             }
             
-            .first-line {
-                font-size: 18px;
-            }
-            
             h2 {
                 font-size: 26px;
             }
@@ -495,6 +501,7 @@
         <div class="container">
             <h1>63-Year-Old With Bad Knees Builds $3,800 Shed Using "Forgotten Blueprint Vault"</h1>
             <h2 style = "color: white">"I couldn't even build a birdhouse before discovering this military veteran's woodworking secret"</h2>
+            <!-- Removed redundant text box here -->
         </div>
     </div>
     
@@ -586,6 +593,7 @@
             
             <div class="image-container">
                 <img src="images/blueprint.jpg" style="width:500px; height:350px" alt="Ted's blueprint system features" />
+                <p class="image-caption">Ted's blueprint system showing callouts for each feature mentioned above</p>
             </div>
             
             <h2>How Much Would You Pay For Custom Furniture?</h2>
@@ -635,7 +643,7 @@
             
             <div class="testimonials">
                 <div class="testimonial">
-                    <p><strong>John - 51 (Texas):</strong> "Built an entire bedroom set that would have cost $3,200 retail."</p>
+                    <p><strong>John - 53 (Texas):</strong> "Built an entire bedroom set that would have cost $3,200 retail."</p>
                 </div>
                 
                 <div class="testimonial">
@@ -765,6 +773,34 @@
         
         // Update countdown every minute
         setInterval(updateCountdown, 60000);
+        
+        // JavaScript to track engagement events and Taboola conversions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track CTA clicks with delayed redirection
+            const ctaButtons = document.querySelectorAll('.cta-button, .sticky-cta');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Prevent default action
+                    e.preventDefault();
+                   
+                    console.log('CTA clicked: ' + this.textContent.trim());
+                   
+                    // Get the destination URL
+                    const destinationUrl = this.getAttribute('href');
+                   
+                    // Add Taboola conversion tracking
+                    if (window._tfa) {
+                        window._tfa.push({notify: 'event', name: 'Lead', id: 1833931});
+                        console.log('Taboola Lead conversion tracked');
+                    }
+                   
+                    // Wait a short moment for tracking to complete, then redirect
+                    setTimeout(function() {
+                        window.location.href = destinationUrl;
+                    }, 200); // 200ms delay
+                });
+            });
+        });
     </script>
 </body>
 </html>
