@@ -316,32 +316,24 @@
             position: relative;
         }
         
+        .retail-price::before, 
         .retail-price::after {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 2px;
-            background-color: var(--secondary-color);
+            background-color: #cc0000;
+            height: 3px;
+            width: 140%;
             top: 50%;
-            left: 0;
-            transform: rotate(-10deg);
+            left: -20%;
+            z-index: 1;
         }
         
-        .retail-cross {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 50%;
-            border: 2px solid #9a3815;
-            color: #9a3815;
-            font-size: 24px;
-            font-weight: bold;
+        .retail-price::before {
+            transform: rotate(45deg);
+        }
+        
+        .retail-price::after {
+            transform: rotate(-45deg);
         }
         
         .your-price {
@@ -564,7 +556,6 @@
             
             <div class="price-comparison">
                 <div class="retail-price">
-                    <div class="retail-cross">✕</div>
                     <h3>Store-Bought Custom Crib</h3>
                     <div class="price">$1,200</div>
                     <p>Factory-made with limited options</p>
