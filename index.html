@@ -180,8 +180,60 @@
             margin: 40px 0;
         }
 
+        .urgency-image-container {
+            position: relative;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
         .urgency-image {
-            opacity: 0.6;
+            opacity: 0.9;
+            display: block;
+        }
+        
+        .countdown-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(215, 60, 46, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid white;
+        }
+        
+        .countdown-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+        
+        .countdown-box {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            padding: 8px;
+            margin: 0 4px;
+            min-width: 50px;
+        }
+        
+        .countdown-value {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 4px;
         }
         
         .testimonial {
@@ -362,6 +414,30 @@
                 width: 100%;
                 padding: 15px 25px;
                 font-size: 18px;
+            }
+            
+            .countdown-overlay {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+            }
+            
+            .countdown-title {
+                font-size: 14px;
+            }
+            
+            .countdown-box {
+                padding: 5px;
+                min-width: 40px;
+            }
+            
+            .countdown-value {
+                font-size: 18px;
+            }
+            
+            .countdown-label {
+                font-size: 10px;
             }
         }
     </style>
@@ -563,8 +639,25 @@
                 <p>This could disappear very soon.</p>
             </div>
             
-            <div class="image-container">
-                <img class = "urgency-image" src="images/cropped-hero section.jpg" style = "width: 700px; height: 350px" alt="Ted in workshop with countdown timer" />
+            <div class="urgency-image-container">
+                <img class="urgency-image" src="images/cropped-hero section.jpg" style="width: 700px; height: 350px" alt="Ted in workshop with countdown timer" />
+                <div class="countdown-overlay">
+                    <div class="countdown-title">OFFER EXPIRES IN:</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="days">05</div>
+                            <div class="countdown-label">days</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="hours">12</div>
+                            <div class="countdown-label">hours</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="minutes">33</div>
+                            <div class="countdown-label">mins</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <h2>Imagine Your First Successful Project</h2>
@@ -600,5 +693,41 @@
             <p>Copyright © 2025 Ted's Woodworking Blueprint Vault. All Rights Reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        // For a truly dynamic countdown, you would set a future date
+        // This simple version updates the display but doesn't actually count down
+        // To make it fully functional, replace with a proper countdown to a specific date
+        
+        function updateCountdown() {
+            const now = new Date();
+            const days = document.getElementById('days');
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            
+            // Decrease minutes
+            let mins = parseInt(minutes.innerText);
+            mins -= 1;
+            if (mins < 0) {
+                mins = 59;
+                // Decrease hours
+                let hrs = parseInt(hours.innerText);
+                hrs -= 1;
+                if (hrs < 0) {
+                    hrs = 23;
+                    // Decrease days
+                    let dys = parseInt(days.innerText);
+                    dys -= 1;
+                    if (dys < 0) dys = 0;
+                    days.innerText = dys.toString().padStart(2, '0');
+                }
+                hours.innerText = hrs.toString().padStart(2, '0');
+            }
+            minutes.innerText = mins.toString().padStart(2, '0');
+        }
+        
+        // Update countdown every minute
+        setInterval(updateCountdown, 60000);
+    </script>
 </body>
 </html>
