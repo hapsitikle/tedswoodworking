@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -314,6 +315,12 @@
             text-align: center;
         }
         
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
         .image-caption {
             font-style: italic;
             text-align: center;
@@ -418,7 +425,7 @@
         }
         
         /* Mobile Responsiveness */
-                    @media (max-width: 768px) {
+        @media (max-width: 768px) {
             body {
                 font-size: 16px;
             }
@@ -487,6 +494,94 @@
                 font-size: 16px;
                 width: auto;
             }
+            
+            /* Image optimization for mobile */
+            .image-container {
+                margin: 20px 0;
+            }
+            
+            .image-container img {
+                width: 100% !important;
+                height: auto !important;
+                object-fit: contain;
+            }
+            
+            .image-caption {
+                font-size: 14px;
+                margin-top: 8px;
+            }
+            
+            /* Improve readability on mobile */
+            p, li {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            
+            .testimonial {
+                padding: 12px 15px;
+            }
+            
+            .highlight-box {
+                padding: 12px 15px;
+                margin: 20px 0;
+            }
+            
+            /* Improve touch targets for mobile */
+            li {
+                margin-bottom: 15px;
+            }
+            
+            .check-list li, .x-list li {
+                padding-left: 30px;
+            }
+        }
+        
+        /* Small mobile screens */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+            
+            .hero h2 {
+                font-size: 16px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            h3 {
+                font-size: 20px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .cta-button {
+                padding: 14px 20px;
+                font-size: 16px;
+            }
+            
+            .sticky-cta {
+                padding: 10px 16px;
+                font-size: 15px;
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .price {
+                font-size: 30px;
+            }
+            
+            /* Improve spacing on very small screens */
+            section {
+                padding: 30px 0;
+            }
+            
+            .cta-section {
+                padding: 30px 15px;
+            }
         }
     </style>
 </head>
@@ -553,7 +648,7 @@
             </ul>
             
             <div class="image-container">
-                <img src="images/garage.jpg" style = "width: 500px; height: 400px" alt="Before/after garage transformation" />
+                <img src="images/garage.jpg" alt="Before/after garage transformation" />
             </div>
             
             <h2>The "Shortcut Secret" That Changed Everything</h2>
@@ -592,7 +687,7 @@
             </ul>
             
             <div class="image-container">
-                <img src="images/blueprint.jpg" style="width:500px; height:350px" alt="Ted's blueprint system features" />
+                <img src="images/blueprint.jpg" alt="Ted's blueprint system features" />
                 <p class="image-caption">Ted's blueprint system showing callouts for each feature mentioned above</p>
             </div>
             
@@ -797,7 +892,7 @@
                     // Wait a short moment for tracking to complete, then redirect
                     setTimeout(function() {
                         window.location.href = destinationUrl;
-                    }, 300); // 200ms delay
+                    }, 300); // 300ms delay
                 });
             });
         });
