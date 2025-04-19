@@ -255,6 +255,48 @@
             box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
         }
         
+        /* Sticky CTA Button */
+        .sticky-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .sticky-cta:hover {
+            background-color: #d1232f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
         .cta-section {
             text-align: center;
             padding: 50px 20px;
@@ -438,6 +480,14 @@
             .countdown-label {
                 font-size: 10px;
             }
+            
+            .sticky-cta {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 16px;
+                width: auto;
+            }
         }
     </style>
 </head>
@@ -518,11 +568,6 @@
             <p>Imagine having a master woodworker standing behind you, guiding every cut, every measurement, every step.</p>
             
             <p>That's what this feels like.</p>
-            
-            <div class="cta-section">
-                <h3>Want to see exactly how it works?</h3>
-                <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="cta-button">Watch Ted's Demonstration »</a>
-            </div>
             
             <h2>What Makes This Different? (This Is Critical)</h2>
             
@@ -691,6 +736,9 @@
             <p>Copyright © 2025 Ted's Woodworking Blueprint Vault. All Rights Reserved.</p>
         </div>
     </footer>
+    
+    <!-- Sticky CTA Button -->
+    <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="sticky-cta">Watch Ted's Demonstration »</a>
     
     <script>
         // For a truly dynamic countdown, you would set a future date
