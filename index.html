@@ -3,1357 +3,607 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>From Woodworking Anxiety to Mastery | Ted McGrath's Complete Woodworking System</title>
+    <title>Ted's Woodworking Blueprint Vault - Transform Your Woodworking Skills</title>
     <style>
-        /* Base Styles */
         :root {
-            --primary: #A13A3A;
-            --secondary: #D4A150;
-            --dark-wood: #3E2723;
-            --light-wood: #F5EEE0;
-            --cream: #FAF7F1;
-            --text-dark: #333333;
-            --text-medium: #555555;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --primary-color: #5d4037; /* Rich brown */
+            --secondary-color: #d7892e; /* Warm amber/cedar */
+            --accent-color: #f5f2eb; /* Off-white like sanded wood */
+            --text-color: #3e2723; /* Dark brown for text */
+            --light-gray: #efe8da; /* Beige like sawdust */
+            --success-color: #7d5f49; /* Medium brown like stained pine */
         }
         
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--text-medium);
-            background-color: var(--cream);
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.45;
+            color: var(--text-color);
+            background-color: #fff;
+            font-size: 18px;
         }
         
         .container {
-            max-width: 1140px;
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        h1, h2, h3, h4 {
-            font-family: 'Georgia', serif;
-            color: var(--dark-wood);
-            margin-bottom: 1rem;
-            line-height: 1.3;
+        /* Header Section */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
         }
         
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-        
-        h2:after {
-            content: '';
-            display: block;
-            width: 70px;
-            height: 3px;
-            background-color: var(--secondary);
-            margin-top: 0.5rem;
-        }
-        
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-            color: var(--primary);
-        }
-        
-        p {
-            margin-bottom: 1.2rem;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: var(--border-radius);
-        }
-        
-        a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        a:hover {
-            color: var(--secondary);
-        }
-        
-        /* Header */
-        .header {
-            background-color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Georgia', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark-wood);
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo:before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233E2723"><path d="M13.9 3l-.8 1.2c-.1.3-.1.6 0 .9l3.4 5.8-3.9 5.2h-8.2l-1.5 1.9h11l1.9-2.6 3.1-4.2.1-.2.1-.1-5.1-8.7-.1-.2z"/><path d="M6 15l5.8-7.6c.2-.3.2-.7 0-1l-1.3-2.4-6.2 8.4 2.1 1.6-2.1 2.9h1.7z"/></svg>');
-            background-repeat: no-repeat;
+        header p {
+            font-size: 16px;
+            margin-top: 5px;
+            color: var(--accent-color);
         }
         
         /* Hero Section */
         .hero {
-            background-image: linear-gradient(to right, rgba(62, 39, 35, 0.85), rgba(62, 39, 35, 0.6)), url('images/cropped-hero section.jpg');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(93, 64, 55, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
             color: white;
-            padding: 5rem 0;
+            padding: 30px 0;
             text-align: center;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
         }
         
         .hero h1 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 2.8rem;
+            font-size: 38px;
+            margin-bottom: 15px;
+            line-height: 1.2;
         }
         
-        .hero .subtitle {
-            font-size: 1.3rem;
-            color: var(--light-wood);
-            margin-bottom: 2rem;
+        .hero h2 {
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            font-style: italic;
         }
         
-        .trusted-by {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius);
-            padding: 1rem;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-        
-        /* Button */
-        .button {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
+        .first-line {
+            font-size: 22px;
             font-weight: bold;
-            padding: 15px 30px;
-            border-radius: var(--border-radius);
-            transition: all 0.3s;
-            box-shadow: var(--box-shadow);
-            margin: 1rem 0;
-            text-align: center;
-            font-size: 1.1rem;
+            color: var(--secondary-color);
+            background-color: rgba(255, 255, 255, 0.9);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-top: 10px;
         }
         
-        .button:hover {
-            background-color: var(--primary);
+        /* Content Sections */
+        section {
+            padding: 40px 0;
+        }
+        
+        .warning-bar {
+            background-color: var(--secondary-color);
             color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 30px;
         }
         
-        .button-large {
-            font-size: 1.2rem;
-            padding: 18px 36px;
+        h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
         }
         
-        /* Main Content */
-        .section {
-            padding: 4rem 0;
+        h3 {
+            font-size: 28px;
+            margin: 35px 0 20px;
+            color: var(--primary-color);
         }
         
-        .section-white {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--box-shadow);
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
         }
         
-        /* Problem Section */
-        .struggles {
-            margin: 2rem 0;
+        .story {
+            background-color: var(--light-gray);
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
         }
         
-        .struggle-item {
-            display: flex;
-            margin-bottom: 1.5rem;
-            align-items: flex-start;
+        .highlight-box {
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            background-color: rgba(215, 137, 46, 0.1);
+            margin: 30px 0;
+            box-shadow: 0 2px 4px rgba(93, 64, 55, 0.1);
         }
         
-        .struggle-icon {
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            margin-right: 1rem;
-            background-color: var(--light-wood);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Lists */
+        ul, ol {
+            margin: 20px 0 30px 20px;
         }
         
-        .struggle-text {
-            flex-grow: 1;
-        }
-        
-        .struggle-text h3 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        /* Checklist */
-        .checklist {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        
-        .checklist li {
+        li {
+            margin-bottom: 12px;
             position: relative;
-            padding-left: 2rem;
-            margin-bottom: 1rem;
         }
         
-        .checklist li:before {
-            content: "";
+        .check-list {
+            list-style: none;
+            margin-left: 5px;
+        }
+        
+        .check-list li {
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .check-list li:before {
+            content: "✅";
             position: absolute;
             left: 0;
-            top: 6px;
-            width: 16px;
-            height: 16px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4A150"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
-            background-repeat: no-repeat;
+            top: 0;
+        }
+        
+        .x-list {
+            list-style: none;
+            margin-left: 5px;
+        }
+        
+        .x-list li {
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .x-list li:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         
         /* Testimonials */
+        .testimonials {
+            background-color: var(--light-gray);
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
         .testimonial {
-            background-color: white;
-            border-left: 4px solid var(--secondary);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            position: relative;
-            box-shadow: var(--box-shadow);
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            background-color: #faf7f2;
+            box-shadow: 0 2px 10px rgba(93, 64, 55, 0.1);
         }
         
-        .testimonial:before {
-            content: """;
-            font-size: 4rem;
-            font-family: Georgia, serif;
-            color: var(--secondary);
-            opacity: 0.2;
-            position: absolute;
-            top: -15px;
-            left: 10px;
-        }
-        
-        .testimonial .author {
-            font-style: normal;
-            font-weight: bold;
-            display: block;
-            margin-top: 1rem;
-            text-align: right;
-            color: var(--dark-wood);
-        }
-        
-        /* Two Column Layout */
-        .two-column {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .column {
-            flex: 1;
-        }
-        
-        
-        .featured-project img {
-            margin-bottom: 1rem;
-        }
-        
-        .featured-project h3 {
-            margin-top: 0;
-        }
-        
-        /* FAQ */
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            padding-bottom: 1.5rem;
-        }
-        
-        .faq-question {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: var(--dark-wood);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background-color: var(--dark-wood);
+        /* CTAs */
+        .cta-button {
+            display: inline-block;
+            padding: 18px 36px;
+            background-color: var(--secondary-color);
             color: white;
-            padding: 4rem 0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+        }
+        
+        .cta-button:hover {
+            background-color: #d1232f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: var(--accent-color);
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        
+        /* Images */
+        .image-container {
+            margin: 30px 0;
             text-align: center;
         }
         
-        .cta-section h2 {
-            color: white;
-            margin-bottom: 1.5rem;
+        .image-caption {
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
         }
         
-        .cta-section h2:after {
-            margin: 0.5rem auto 0;
-        }
-        
-        /* Guarantee */
-        .guarantee {
+        /* Benefits & Features */
+        .benefits {
             display: flex;
-            align-items: center;
-            background-color: var(--light-wood);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 40px 0;
         }
         
-        .guarantee-image {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            margin-right: 1.5rem;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4A150"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>') no-repeat center / contain;
+        .benefit {
+            width: 48%;
+            margin-bottom: 30px;
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid var(--success-color);
+        }
+        
+        /* Price Comparison */
+        .price-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .price-box {
+            width: 48%;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        
+        .retail-price {
+            background-color: #f5e0d5;
+            border: 2px solid #e5c3ac;
+            position: relative;
+        }
+        
+        .retail-price::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-color);
+            top: 50%;
+            left: 0;
+            transform: rotate(-10deg);
+        }
+        
+        .your-price {
+            background-color: #e6ded0;
+            border: 2px solid #cec0a8;
+        }
+        
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .retail-price .price {
+            color: #9a3815;
+        }
+        
+        .your-price .price {
+            color: #4e6a29;
+        }
+        
+        /* Urgency Section */
+        .urgency {
+            background-color: rgba(215, 137, 46, 0.15);
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px dashed var(--secondary-color);
+            margin: 40px 0;
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark-wood);
+            background-color: var(--primary-color);
             color: white;
-            padding: 3rem 0 1.5rem;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-        }
-        
-        .footer-content {
+            padding: 30px 0;
             text-align: center;
         }
         
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: var(--light-wood);
-        }
-        
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
-        
-        .copyright {
-            margin-top: 1.5rem;
-            color: rgba(255,255,255,0.6);
-        }
-        
-        /* Highlighting and Emphasis */
-        .highlight {
-            background-color: rgba(212, 161, 80, 0.2);
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-        
-        .emphasis {
-            font-weight: bold;
-            color: var(--primary);
-        }
-        
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-       
-        .project-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: transform 0.3s;
-            width: 100%;
-        }
-       
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-       
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-       
-        .project-details {
-            padding: 1.5rem;
-        }
-       
-        .project-details h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: var(--walnut);
-        }
-       
-        .project-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: var(--light-text);
-        }
-       
-        .project-meta span {
-            display: flex;
-            align-items: center;
-        }
-       
-        .project-meta span:before {
-            content: "";
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            margin-right: 6px;
-        }
-
-        .time:before {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4A150"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>') no-repeat center / contain;
-        }
-       
-        .difficulty:before {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4A150"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>') no-repeat center / contain;
-        }
-       
-        .cost:before {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4A150"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>') no-repeat center / contain;
-        }
-        
-        /* Video Container */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background-color: #000;
-            margin: 2rem 0;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            border: 8px solid #3E2723;
-        }
-        
-        .video-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: var(--border-radius);
-        }
-        
-        .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70px;
-    height: 70px;
-    background-color: rgba(161, 58, 58, 0.9); /* Darker color using your --primary variable */
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-    /* Adding a subtle outline to make it stand out more */
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
-}
-
-.play-button:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 15px 0 15px 26px;
-    border-color: transparent transparent transparent white;
-    margin-left: 5px;
-}
-
-.play-button:hover {
-    background-color: var(--primary);
-    transform: translate(-50%, -50%) scale(1.1);
-}
-        
-        /* Trust Badges */
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            height: 80px;
-            margin-bottom: 1rem;
-        }
-        
-        /* Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background-color: var(--secondary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: var(--box-shadow);
-            cursor: pointer;
-            z-index: 99;
-            transition: all 0.3s;
-        }
-        
-        .back-to-top:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        .back-to-top:before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-top: 2px solid white;
-            border-left: 2px solid white;
-            transform: rotate(45deg);
-            margin-top: 5px;
-        }
-        
-        /* Featured in */
-        .featured-in {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .featured-in p {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            color: var(--text-medium);
-        }
-        
-        .featured-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .featured-logo {
-            height: 70px;
-        }
-        
-        /* Compare table */
-        .compare-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .compare-table th, 
-        .compare-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .compare-table th {
-            background-color: var(--dark-wood);
-            color: white;
-        }
-        
-        .compare-table tr:nth-child(even) {
-            background-color: #f8f8f8;
-        }
-        
-        .compare-table tr:hover {
-            background-color: #f1f1f1;
-        }
-        
-        .compare-check {
-            color: #4CAF50;
-            font-weight: bold;
-        }
-        
-        .compare-x {
-            color: #F44336;
-        }
-        
-        /* Author box */
-        .author-box {
-            display: flex;
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-            align-items: center;
-        }
-        
-        .author-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 1.5rem;
-            border: 1px solid black;
-        }
-        
-        .author-bio h3 {
-            margin-top: 0;
-        }
-        
-        .author-title {
-            font-style: italic;
-            color: var(--text-medium);
-            margin-bottom: 1rem;
-        }
-        
-        /* Mobile CTA */
-        .mobile-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            padding: 10px;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-            z-index: 98;
-        }
-        
-        /* Mobile Responsive */
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem; /* Reduced font size for mobile */
+            body {
+                font-size: 16px;
+            }
+            
+            .hero h1 {
+                font-size: 30px;
+            }
+            
+            .hero h2 {
+                font-size: 18px;
+            }
+            
+            .first-line {
+                font-size: 18px;
             }
             
             h2 {
-                font-size: 1.4rem;
+                font-size: 26px;
             }
             
             h3 {
-                font-size: 1.2rem;
+                font-size: 22px;
             }
             
-            p, .checklist li {
-                font-size: 0.95rem; /* Slightly smaller text for readability */
-            }
-            
-            .hero {
-                padding: 2rem 0; /* Reduced padding */
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem; /* Smaller hero heading */
-            }
-            
-            .hero .subtitle {
-                font-size: 1rem;
-            }
-            
-            .section {
-                padding: 2rem 0; /* Reduced section padding */
-            }
-            
-            .section-white {
-                padding: 1.5rem; /* Smaller padding inside white sections */
-                margin-bottom: 1.5rem;
-            }
-            
-            /* Ensure project grid displays correctly */
-            .project-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
-                gap: 1.5rem;
-            }
-            
-            /* Stack footer links */
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-                align-items: center;
-            }
-            
-            /* Fix the author box */
-            .author-box {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .author-image {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-            
-            .two-column {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .guarantee {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .guarantee-image {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-            
-            .button {
-                display: block;
+            .benefit, .price-box {
                 width: 100%;
             }
             
-            .mobile-cta {
-                display: block;
+            .price-comparison {
+                flex-direction: column;
             }
             
-            .back-to-top {
-                bottom: 70px;
+            .price-box {
+                margin-bottom: 20px;
             }
             
-            /* Add padding to bottom of page to prevent CTA from covering content */
-            body {
-                padding-bottom: 60px;
-            }
-            
-            /* Updated comparison table styling for mobile */
-            .compare-table {
-                display: block;
-                border: none;
-                box-shadow: none;
-            }
-            
-            .compare-table thead {
-                display: none; /* Hide the header row */
-            }
-            
-            .compare-table tr {
-                display: block;
-                margin-bottom: 1.5rem;
-                border-radius: var(--border-radius);
-                box-shadow: var(--box-shadow);
-            }
-            
-            .compare-table td {
-                display: block;
-                text-align: right;
-                padding: 12px 15px;
-                padding-left: 45%; /* Adjusted space for labels */
-                position: relative;
-                border-bottom: 1px solid #eee;
-                min-height: 48px; /* Ensure consistent height */
-            }
-            
-            /* Add a data label before each cell */
-            .compare-table td:before {
-                content: attr(data-label);
-                position: absolute;
-                left: 15px;
-                width: 40%; /* Control width of label */
-                font-weight: bold;
-                text-align: left;
-                color: var(--dark-wood);
-                top: 50%; /* Center vertically */
-                transform: translateY(-50%);
-            }
-            
-            /* Special styling for the feature name */
-            .compare-table td:first-child {
-                background-color: var(--dark-wood);
-                color: white;
-                text-align: center;
-                font-weight: bold;
-                border-radius: var(--border-radius) var(--border-radius) 0 0;
-                padding: 15px;
-                font-size: 1.1rem;
-            }
-            
-            .compare-table td:first-child:before {
-                content: none;
-            }
-            
-            /* Special styling for each product column */
-            .compare-table td:nth-child(2) {
-                background-color: #f9f9f9;
-            }
-            
-            .compare-table td:nth-child(3) {
-                background-color: #f5f5f5;
-            }
-            
-            .compare-table td:nth-child(4) {
-                background-color: #f0f0f0;
-                border-radius: 0 0 var(--border-radius) var(--border-radius);
-                border-bottom: none;
-            }
-            
-            /* Fix alignment of check/x marks */
-            .compare-check, .compare-x {
-                display: inline-block;
-                margin-right: 4px;
-                min-width: 16px;
-                text-align: center;
-            }
-            
-            /* Fix Ted's Plans cell styling */
-            .compare-table td:nth-child(4) {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                text-align: right;
-                padding-right: 15px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px; /* Smaller container padding */
-            }
-            
-            h1 {
-                font-size: 1.6rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.6rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 0.9rem;
-            }
-            
-            .trusted-by {
-                font-size: 0.8rem;
-                padding: 0.75rem;
-            }
-            
-            .testimonial {
-                padding: 1rem;
-            }
-            
-            .testimonial:before {
-                font-size: 3rem;
-            }
-            
-            .struggle-icon {
-                width: 30px; /* Smaller icons */
-                height: 30px;
-            }
-            
-            .struggle-text h3 {
-                font-size: 1.1rem;
-            }
-            
-            .project-image {
-                height: 180px; /* Smaller project images */
-            }
-            
-            /* Improved touch targets for mobile */
-            .button, .footer-links a {
-                padding: 12px 20px;
-                margin: 0.5rem 0;
-            }
-            
-            /* Smaller featured logos */
-            .featured-logos {
-                gap: 1rem;
-            }
-            
-            .featured-logo {
-                height: 50px;
-                max-width: 100%;
-            }
-            /* Additional mobile fixes for small screens */
-            .compare-table td {
-                padding-left: 40%; /* Reduced padding for very small screens */
-                word-break: break-word; /* Ensure text wraps properly */
-            }
-            
-            .compare-table td:before {
-                width: 35%; /* Slightly narrower label width on very small screens */
-            }
-            
-            /* Adjust card styling for better mobile appearance */
-            .project-card {
-                margin-bottom: 1rem;
-            }
-            
-            /* Fix spacing in comparison table */
-            .compare-table td:nth-child(4) {
-                display: flex;
-                align-items: center;
-                min-height: 52px;
-            }
-            
-            /* Fix for feature name centering */
-            .compare-table td:first-child {
-                min-height: auto;
-                padding: 12px;
+            .cta-button {
+                width: 100%;
+                padding: 15px 25px;
+                font-size: 18px;
             }
         }
     </style>
-    <!-- Taboola Pixel Code -->
-<script type='text/javascript'>
-  window._tfa = window._tfa || [];
-  window._tfa.push({notify: 'event', name: 'page_view', id: 1833931});
-  !function (t, f, a, x) {
-         if (!document.getElementById(x)) {
-            t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
-         }
-  }(document.createElement('script'),
-  document.getElementsByTagName('script')[0],
-  '//cdn.taboola.com/libtrc/unip/1833931/tfa.js',
-  'tb_tfa_script');
-</script>
-<!-- End of Taboola Pixel Code -->
 </head>
 <body>
-    <header class="header">
-        <div class="container header-content">
-            <a href="#" class="logo">Ted's Plans</a>
+    <header>
+        <div class="container">
+            <p>EXCLUSIVE OFFER FOR SERIOUS DIYers</p>
         </div>
     </header>
-
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Transform Woodworking Anxiety Into Mastery With These Done-For-You Plans</h1>
-            <div class="subtitle">How a 62-year-old master carpenter's simple system helps complete beginners build professional-quality projects in just a weekend (even if you've never picked up a saw)</div>
-            <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="button button-large">Watch The Free Workshop Now</a>
-            <div class="trusted-by">
-                As featured in: <strong>American Woodworker Magazine</strong> and trusted by over 54,000 woodworkers worldwide
-            </div>
+    
+    <div class="hero">
+        <div class="container">
+            <h1>63-Year-Old With Bad Knees Builds $3,800 Shed Using "Forgotten Blueprint Vault"</h1>
+            <h2>"I couldn't even build a birdhouse before discovering this military veteran's woodworking secret"</h2>
+            <p class="first-line">Three months ago, I couldn't build a decent birdhouse.</p>
         </div>
-    </section>
-
-    <div class="container">
-        <section class="section-white">
-            <h2>The Hidden Roadblocks That Stop Most Beginners From Creating Beautiful Projects</h2>
-            
-            <p>Have you ever tried to follow a woodworking tutorial online only to find yourself frustrated and confused? Or maybe you've been interested in woodworking but haven't started because it seems so complicated?</p>
-            
-            <p>You're not alone. Every day, thousands of would-be woodworkers give up on their dreams because of these common obstacles:</p>
-            
-            <div class="struggles">
-                <div class="struggle-item">
-                    <div class="struggle-icon">1</div>
-                    <div class="struggle-text">
-                        <h3>Incomplete Instructions</h3>
-                        <p>Most plans and Other Magazines lack crucial details, leaving you guessing and wasting materials on failed attempts.</p>
-                    </div>
-                </div>
-                
-                <div class="struggle-item">
-                    <div class="struggle-icon">2</div>
-                    <div class="struggle-text">
-                        <h3>Assumed Expertise</h3>
-                        <p>Many tutorials assume you already know the terminology and techniques, leaving beginners completely lost.</p>
-                    </div>
-                </div>
-                
-                <div class="struggle-item">
-                    <div class="struggle-icon">3</div>
-                    <div class="struggle-text">
-                        <h3>Expensive Tool Requirements</h3>
-                        <p>Most guides expect you to have thousands of dollars in specialized equipment and a large workshop space.</p>
-                    </div>
-                </div>
-                
-                <div class="struggle-item">
-                    <div class="struggle-icon">4</div>
-                    <div class="struggle-text">
-                        <h3>Fear of Mistakes</h3>
-                        <p>The anxiety of wasting expensive materials or creating something that doesn't look professional keeps many from even starting.</p>
-                    </div>
-                </div>
+    </div>
+    
+    <section>
+        <div class="container">
+            <div class="warning-bar">
+                Warning: This page will be removed when Ted implements his new membership structure.
             </div>
             
-            <div class="testimonial">
-                "I wanted to build a simple bookshelf for my grandson, but after watching five different YouTube tutorials, I was more confused than when I started. Each one contradicted the others, and none of them actually explained how to make sure everything was square and level."
-                <span class="author">- Michael T., Beginner Woodworker</span>
+            <p>Today, I'm building furniture that people offer to BUY from me.</p>
+            
+            <p>The difference?</p>
+            
+            <p><strong>A "Blueprint Vault" that professional woodworkers are desperately trying to keep secret.</strong></p>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="Before and after woodworking transformation" />
+                <p class="image-caption">Split screen: frustrated man with failed project vs. same man proudly standing next to beautiful handmade furniture</p>
             </div>
             
-            <p>But what if there was a better way? What if you could follow crystal-clear instructions that leave <span class="emphasis">nothing</span> to guesswork?</p>
-        </section>
-
-        <section class="section-white">
-            <h2>Introducing The "Cut List" Revolution</h2>
+            <h3>My Embarrassing Woodworking Story</h3>
             
-            <div class="two-column">
-                <div class="column">
-                    <p>Ted McGrath has spent over 25 years mastering the craft of woodworking and teaching thousands of students. After seeing so many beginners struggle with the same issues, he developed a revolutionary approach to woodworking plans.</p>
-                    
-                    <p>The secret? <span class="highlight">Detailed "cut lists" that tell you exactly what pieces to cut at exactly what dimensions</span> — eliminating the guesswork that causes most beginners to quit.</p>
-                    
-                    <p>Unlike frustrating YouTube tutorials or vague magazine articles, Ted's plans walk you through every single step of the process, from the first cut to the final finish.</p>
-                    
-                    <ul class="checklist">
-                        <li><strong>Step-by-step A to Z instructions</strong> that make building super fast and super easy</li>
-                        <li><strong>Exact cutting and materials lists</strong> so you buy the right amount of wood (no more waste!)</li>
-                        <li><strong>Detailed schematics</strong> that make the most challenging project a walk in the park</li>
-                        <li><strong>Multiple views from all angles</strong> so you see exactly how everything should look</li>
-                        <li><strong>Beginner-friendly approach</strong> — no expensive tools or large workshop needed</li>
-                    </ul>
-                </div>
-                
-                <div class="column">
-                    <div class="video-container">
-                        <img src="images/video thumbnail.png" alt="Ted's Woodworking Plans Preview">
-                        <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="play-button"></a>
-                    </div>
-                    
-                    <p class="emphasis" style="text-align: center;">Click to watch Ted explain his simple system for perfect projects every time</p>
-                </div>
+            <p>After 30 years of military and construction work, my knees were shot.</p>
+            
+            <p>My tools gathered dust.</p>
+            
+            <p>And my pride took a serious hit when I couldn't even build a simple toy for my grandson.</p>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/700/350" alt="Handmade oak crib with surprised daughter" />
+                <p class="image-caption">Close-up of stunning handmade oak crib with inset of surprised daughter's reaction</p>
             </div>
             
-            <div class="testimonial">
-                "The cut list alone saved me hours of frustration and probably $40 in wasted lumber. I used to wing it with YouTube videos and end up with odd-shaped scraps. With Ted's plans, every piece of wood has a purpose."
-                <span class="author">- James T., California</span>
+            <p>Then everything changed with one mysterious text.</p>
+            
+            <h3>The Text Message That Transformed My Retirement</h3>
+            
+            <div class="highlight-box">
+                <p>"Don't share this with anyone else," my Army buddy Frank wrote.</p>
+                <p>The link looked suspicious. Almost deleted it.</p>
+                <p>But thank God I didn't.</p>
             </div>
-        </section>
-
-        <section class="section-white">
-            <h2>From "I've Never Built Anything" to "Wow, You Made That?"</h2>
             
-            <p>Over the past year, something surprising has been happening across garages, sheds, and basements all over America.</p>
+            <p>What I discovered has now helped <strong>20,000+ regular guys</strong> build professional-quality furniture with:</p>
             
-            <p>Men and women — many of them over 40, some retired, some just burned out from screens — are picking up saws, sanding blocks, and chisels again. Not for money. Not for fame. But for <span class="emphasis">peace</span>.</p>
-            
-            <p>And here's the wild twist: Many of these people aren't craftsmen. They're <span class="highlight">total beginners</span>. And they're building projects that look like they were handcrafted by a pro.</p>
-            
-            
-            <h3>Projects You Can Build This Weekend:</h3>
-            
-            <div class="project-grid">
-                        <div class="project-card">
-                            <img src="images/cropped-wooden bench.jpg" alt="Farmhouse Bench" class="project-image">
-                            <div class="project-details">
-                                <h3>Farmhouse Bench</h3>
-                                <div class="project-meta">
-                                    <span class="time">4-6 hours</span>
-                                    <span class="difficulty">Beginner</span>
-                                    <span class="cost">$25-40</span>
-                                </div>
-                                <p>Perfect for entryways or dining tables. Looks like custom furniture at a fraction of the cost.</p>
-                            </div>
-                        </div>
-                       
-                        <div class="project-card">
-                            <img src="images/cropped-floating shelves.jpg" alt="Floating Shelves" class="project-image">
-                            <div class="project-details">
-                                <h3>Floating Shelves</h3>
-                                <div class="project-meta">
-                                    <span class="time">2-3 hours</span>
-                                    <span class="difficulty">Beginner</span>
-                                    <span class="cost">$15-30</span>
-                                </div>
-                                <p>Elegant storage that looks like it costs hundreds but can be built in an afternoon.</p>
-                            </div>
-                        </div>
-                       
-                        <div class="project-card">
-                            <img src="images/cropped-jewelry box.jpg" alt="Heirloom Jewelry Box" class="project-image">
-                            <div class="project-details">
-                                <h3>Heirloom Jewelry Box</h3>
-                                <div class="project-meta">
-                                    <span class="time">6-8 hours</span>
-                                    <span class="difficulty">Intermediate</span>
-                                    <span class="cost">$30-50</span>
-                                </div>
-                                <p>A perfect gift that will be cherished for generations—built in a single weekend.</p>
-                            </div>
-                        </div>
-                    </div>
-            
-            <p style="text-align: center; margin-top: 2rem;">
-                <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="button">Watch The Free Workshop & Get Your First Project Blueprint</a>
-            </p>
-        </section>
-
-        <section class="section-white">
-            <h2>Why Ted's Plans Is Different From Everything Else You've Tried</h2>
-            
-            <table class="compare-table">
-    <thead>
-        <tr>
-            <th>Features</th>
-            <th>YouTube Tutorials</th>
-            <th>Other Magazines</th>
-            <th>Ted's Plans</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Detailed Step-by-Step Instructions</td>
-            <td data-label="YouTube Tutorials"><span class="compare-x">✕</span> Often skips steps</td>
-            <td data-label="Other Magazines"><span class="compare-x">✕</span> Basic overview</td>
-            <td data-label="Ted's Plans"><span class="compare-check">✓</span> Complete A-Z guidance</td>
-        </tr>
-        <tr>
-            <td>Exact Cutting Lists</td>
-            <td data-label="YouTube Tutorials"><span class="compare-x">✕</span> Rarely included</td>
-            <td data-label="Other Magazines"><span class="compare-x">✕</span> Sometimes vague</td>
-            <td data-label="Ted's Plans"><span class="compare-check">✓</span> Precise measurements</td>
-        </tr>
-        <tr>
-            <td>Materials Shopping List</td>
-            <td data-label="YouTube Tutorials"><span class="compare-x">✕</span> Incomplete</td>
-            <td data-label="Other Magazines"><span class="compare-x">✕</span> General suggestions</td>
-            <td data-label="Ted's Plans"><span class="compare-check">✓</span> Exact quantities needed</td>
-        </tr>
-        <tr>
-            <td>Multiple View Schematics</td>
-            <td data-label="YouTube Tutorials"><span class="compare-x">✕</span> Only what's on camera</td>
-            <td data-label="Other Magazines"><span class="compare-x">✕</span> Limited angles</td>
-            <td data-label="Ted's Plans"><span class="compare-check">✓</span> Views from all angles</td>
-        </tr>
-        <tr>
-            <td>Beginner-Friendly</td>
-            <td data-label="YouTube Tutorials"><span class="compare-x">✕</span> Assumes knowledge</td>
-            <td data-label="Other Magazines"><span class="compare-x">✕</span> Aimed at hobbyists</td>
-            <td data-label="Ted's Plans"><span class="compare-check">✓</span> Works for all skill levels</td>
-        </tr>
-        <tr>
-            <td>Variety of Projects</td>
-            <td data-label="YouTube Tutorials"><span class="compare-x">✕</span> Limited selection</td>
-            <td data-label="Other Magazines"><span class="compare-x">✕</span> Few per issue</td>
-            <td data-label="Ted's Plans"><span class="compare-check">✓</span> 16,000+ projects</td>
-        </tr>
-    </tbody>
-</table>
-            
-            <div class="author-box">
-                <img src="images/ted.jpg" alt="Ted McGrath" class="author-image">
-                <div class="author-bio">
-                    <h3>Ted "Woody" McGrath</h3>
-                    <div class="author-title">Certified Master Woodworker, Educator, Trainer, Author</div>
-                    <p>Ted has spent the last 25+ years putting together the world's most comprehensive collection of woodworking plans to help beginners avoid the frustration he experienced when starting out.</p>
-                    <p>"Woodworking shouldn't be that difficult. With the right plans, anyone can create beautiful pieces they're proud of."</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-white">
-            <h2>What You'll Discover In The Free Workshop</h2>
-            
-            <p>When you click to watch Ted's free workshop, you'll discover:</p>
-            
-            <ul class="checklist">
-                <li><strong>The "Cut List Revolution"</strong> - Why Ted's approach makes even complex projects simple for beginners</li>
-                <li><strong>The 5 Essential Tools</strong> you actually need (hint: it's not the expensive ones)</li>
-                <li><strong>How to avoid the costliest mistakes</strong> that waste your time and materials</li>
-                <li><strong>A complete blueprint</strong> for your first project that you can start this weekend</li>
-                <li><strong>The secret to building heirloom-quality pieces</strong> that will last for generations</li>
+            <ul class="check-list">
+                <li>NO woodworking experience needed</li>
+                <li>NO expensive tools required</li>
+                <li>NO wasted materials</li>
+                <li>NO complicated measurements</li>
             </ul>
             
-            <p>Plus, you'll see examples of real projects built by complete beginners who were able to create professional results on their very first try.</p>
-            
-            <div class="testimonial">
-                "After 20 years behind a desk, I'd forgotten what it felt like to actually create something tangible. The first time I ran my hand across that finished oak surface, I nearly teared up. My son asked if I was okay—I told him I was better than okay."
-                <span class="author">- David K., Washington</span>
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="Before/after garage transformation" />
+                <p class="image-caption">Before/after of basic garage vs. same space filled with beautiful handmade projects</p>
             </div>
             
-            <div class="featured-in">
-                <p style = "font-weight: bold">As Featured In</p>
-                <div class="featured-logos">
-                    <img src="images/american woodworker.png" alt="American Woodworker Magazine" class="featured-logo">
-                    <img src="images/popular woodworking.png" alt="Woodworking Magazine" class="featured-logo">
-                    <img src="images/diy network.png" alt="DIY Network" class="featured-logo">
+            <h2>The "Shortcut Secret" That Changed Everything</h2>
+            
+            <p>A master craftsman named Ted McGrath had created something revolutionary.</p>
+            
+            <p>Not just random plans...</p>
+            
+            <p>A complete <strong>"Blueprint Vault"</strong> with over 16,000 step-by-step woodworking plans designed specifically for regular guys like us.</p>
+            
+            <p>Imagine having a master woodworker standing behind you, guiding every cut, every measurement, every step.</p>
+            
+            <p>That's what this feels like.</p>
+            
+            <div class="cta-section">
+                <h3>Want to see exactly how it works?</h3>
+                <a href="#watch-demo" class="cta-button">Watch Ted's Demonstration »</a>
+            </div>
+            
+            <h2>What Makes This Different? (This Is Critical)</h2>
+            
+            <p>I've tried EVERYTHING:</p>
+            
+            <ul class="x-list">
+                <li>YouTube tutorials (they always skip the complicated parts)</li>
+                <li>Free online plans (measurements never worked)</li>
+                <li>Expensive woodworking books (too complicated)</li>
+                <li>Local classes (too fast-paced and expensive)</li>
+            </ul>
+            
+            <p>Ted's approach eliminates ALL these problems.</p>
+            
+            <p>Each blueprint gives you:</p>
+            
+            <ul class="check-list">
+                <li>Exact material lists (no more buying wrong stuff)</li>
+                <li>Precise cutting diagrams (showing exactly where to cut)</li>
+                <li>3D renderings (see your project from every angle)</li>
+                <li>Step-by-step instructions (nothing left to guesswork)</li>
+                <li>Difficulty ratings (start easy, build confidence fast)</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/800/500" alt="Ted's blueprint system features" />
+                <p class="image-caption">Ted's blueprint system showing callouts for each feature mentioned above</p>
+            </div>
+            
+            <h2>How Much Would You Pay For Custom Furniture?</h2>
+            
+            <div class="price-comparison">
+                <div class="retail-price">
+                    <h3>Store-Bought Custom Crib</h3>
+                    <div class="price">$1,200</div>
+                    <p>Factory-made with limited options</p>
+                </div>
+                
+                <div class="your-price">
+                    <h3>My DIY Crib Using Ted's Plans</h3>
+                    <div class="price">$120</div>
+                    <p>Custom-made with premium materials</p>
                 </div>
             </div>
-        </section>
-
-        <section class="section-white">
-            <h2>Frequently Asked Questions</h2>
             
-            <div class="faq-item">
-                <div class="faq-question">Do I need expensive tools or a large workshop?</div>
-                <p>Absolutely not. Many of Ted's projects can be completed with just 5 basic tools: a circular saw ($60-100), drill/driver ($40-80), orbital sander ($40), speed square ($10), and tape measure ($5). You can work in a small space like a balcony, spare room, or even at a kitchen table.</p>
+            <p>My daughter was quoted $1,200 for a custom baby crib.</p>
+            
+            <p>My first project using Ted's plans? That exact same crib.</p>
+            
+            <p>Total cost: $120 in materials and one weekend.</p>
+            
+            <p>She thought I'd bought it from an expensive store until I showed her the sawdust still in my garage.</p>
+            
+            <h2>From "DIY Disaster" to "How Did You Make That?"</h2>
+            
+            <p>Let me be absolutely clear:</p>
+            
+            <div class="highlight-box">
+                <p>I have no special talent. I'm just a regular 58-year-old guy with bad knees.</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">I've never done woodworking before. Will I be able to follow these plans?</div>
-                <p>Yes! Ted designed these plans specifically with beginners in mind. Each step is clearly illustrated and explained, and the plans range from simple starter projects to more advanced pieces as your skills develop. The detailed cut lists take the guesswork out of the process.</p>
+            <p>But in just 8 weeks, I've built:</p>
+            
+            <ul class="check-list">
+                <li>A rocking chair that looks like it costs $800+ (cost me $95)</li>
+                <li>A backyard shed that saved me $3,200 vs. contractor quotes</li>
+                <li>A writing desk my daughter says "looks like it belongs in a magazine"</li>
+                <li>Workshop storage that organized 20 years of accumulated tools</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="Completed woodworking projects with price comparisons" />
+                <p class="image-caption">Proud man showing off multiple completed projects with price comparison tags</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">What's included in the Ted's Plans package?</div>
-                <p>The complete package includes over 16,000 woodworking plans with step-by-step blueprints, cutting lists, material lists, and detailed schematics. You'll also get lifetime free monthly plans, custom plan requests, and access to woodworking guides and tutorial videos. Everything comes with a 60-day money-back guarantee.</p>
-            </div>
+            <h2>The Movement Spreading Like Wildfire</h2>
             
-            <div class="faq-item">
-                <div class="faq-question">Is this a subscription? Are there any recurring fees?</div>
-                <p>No. This is a one-time payment that gives you lifetime access to all 16,000+ plans plus any future updates. There are NO hidden fees or subscriptions.</p>
-            </div>
+            <p>Over 20,000 men have discovered Ted's Blueprint Vault, with stunning results:</p>
             
-            <div class="guarantee">
-                <div class="guarantee-image"></div>
-                <div class="guarantee-content">
-                    <h3>60-Day Money-Back Guarantee</h3>
-                    <p>If you're not completely satisfied with Ted's Plans for any reason, simply let us know within 60 days for a full refund. No questions asked, no hoops to jump through.</p>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p><strong>John (Texas):</strong> "Built an entire bedroom set that would have cost $3,200 retail."</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p><strong>Mike (Oregon):</strong> "Constructed a complete backyard workshop using just one weekend and one set of plans."</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p><strong>Robert (72 years old):</strong> "Now makes toys for my grandchildren and sells them at local craft fairs for extra income."</p>
                 </div>
             </div>
-        </section>
-    </div>
-
-    <section class="cta-section">
-        <div class="container">
-            <h2>Stop Struggling With Incomplete Instructions</h2>
-            <p>Get access to Ted's proven system that's helped over 54,000 people create beautiful woodworking projects - even complete beginners.</p>
-            <p style="margin-bottom: 2rem;">Watch the free workshop and get your first project blueprint to start this weekend!</p>
-            <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="button button-large">Watch The Free Workshop Now</a>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">No signup required. Just watch and learn.</p>
+            
+            <p class="highlight-box">What would YOU build this weekend if failure wasn't possible?</p>
+            
+            <div class="cta-section">
+                <h3>Ready to Start Building Like a Pro?</h3>
+                <a href="#get-access" class="cta-button">See Ted's Blueprints Now »</a>
+            </div>
+            
+            <h2>URGENT: Why This Is About To Disappear</h2>
+            
+            <div class="urgency">
+                <p>Ted recently revealed something concerning.</p>
+                
+                <p>"I created this vault for my private students. The online demand has become overwhelming."</p>
+                
+                <p>Three changes are coming VERY soon:</p>
+                
+                <ul>
+                    <li><strong>MEMBERSHIP CAP:</strong> New enrollments will be limited to control growth</li>
+                    <li><strong>PRICE INCREASE:</strong> Current $37 access will jump to $97</li>
+                    <li><strong>PLAN REMOVAL:</strong> Several premium plans will become "advanced members only"</li>
+                </ul>
+                
+                <p>Professional woodworking associations are pressuring Ted to stop "giving away their secrets."</p>
+                
+                <p>This could disappear very soon.</p>
+            </div>
+            
+            <div class="image-container">
+                <img src="/api/placeholder/700/350" alt="Ted in workshop with countdown timer" />
+                <p class="image-caption">Ted in his workshop with countdown timer graphic overlay</p>
+            </div>
+            
+            <h2>Imagine Your First Successful Project</h2>
+            
+            <p>Think about standing back THIS WEEKEND saying "I built that!"</p>
+            
+            <p>Picture your wife's face when she sees what you've created.</p>
+            
+            <p>Imagine the money saved by building instead of buying.</p>
+            
+            <p>There's nothing like the pride of creating something with your own hands.</p>
+            
+            <p>And it's all possible with the right blueprints guiding you every step of the way.</p>
+            
+            <h3>One Final Question</h3>
+            
+            <p>Are you content watching TV while your tools gather dust?</p>
+            
+            <p>Or are you ready to create beautiful, useful things your family will cherish for generations?</p>
+            
+            <p>The choice is yours, but only for a limited time.</p>
+            
+            <div class="cta-section">
+                <a href="#final-cta" class="cta-button">Click Here To See Ted's Blueprints Before The Price Triples »</a>
+                
+                <p style="margin-top: 30px;"><strong>P.S.</strong> Ted is including FOUR special bonuses with every access pass, including his exclusive "Woodworking Secrets" video series ($197 value). These bonuses disappear when the new pricing takes effect.</p>
+            </div>
         </div>
     </section>
-
-    <div class="container">
-        <div class="trust-badges">
-            <img src="images/secure payment.jpg" alt="Secure Payment" class="badge">
-            <img src="images/accredited business.jpg" alt="BBB Accredited" class="badge">
-            <img src="images/money back new.png" alt="Satisfaction Guaranteed" class="badge">
-            <img src="images/54000 customers.png" alt="54,000+ Customers" class="badge">
-        </div>
-    </div>
-
+    
     <footer>
-        <div class="container footer-content">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Affiliate Disclosure</a>
-            </div>
-            <div class="copyright">
-                <p>Copyright © 2025 Ted's Plans. All Rights Reserved.</p>
-                <p><small>This page contains affiliate links. If you purchase a product after clicking an affiliate link, I may receive a commission.</small></p>
-            </div>
+        <div class="container">
+            <p>Copyright © 2025 Ted's Woodworking Blueprint Vault. All Rights Reserved.</p>
         </div>
     </footer>
-    
-    <div class="mobile-cta">
-        <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="button">Watch Free Workshop</a>
-    </div>
-    
-    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
-
-    <script>
-    // JavaScript to track engagement events and Taboola conversions
-    document.addEventListener('DOMContentLoaded', function() {
-        // Track CTA clicks with delayed redirection
-        const ctaButtons = document.querySelectorAll('.button');
-        ctaButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Prevent default action
-                e.preventDefault();
-                
-                console.log('CTA clicked: ' + this.textContent.trim());
-                
-                // Get the destination URL
-                const destinationUrl = this.getAttribute('href');
-                
-                // Add Taboola conversion tracking
-                if (window._tfa) {
-                    window._tfa.push({notify: 'event', name: 'Lead', id: 1833931});
-                    console.log('Taboola Lead conversion tracked');
-                }
-                
-                // Wait a short moment for tracking to complete, then redirect
-                setTimeout(function() {
-                    window.location.href = destinationUrl;
-                }, 200); // 200ms delay
-            });
-        });
-        
-        // Track video play button click with delayed redirection
-        const playButton = document.querySelector('.play-button');
-        if (playButton) {
-            playButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('Video play button clicked');
-                
-                // Add Taboola conversion tracking
-                if (window._tfa) {
-                    window._tfa.push({notify: 'event', name: 'Lead', id: 1833931});
-                    console.log('Taboola Lead conversion tracked');
-                }
-                
-                // Redirect after a short delay
-                setTimeout(function() {
-                    window.location.href = "https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans";
-                }, 200);
-            });
-        }
-        
-        // Scroll event listener for potential future tracking
-        window.addEventListener('scroll', function() {
-            // Scroll tracking removed as requested
-        });
-    });
-</script>
 </body>
 </html>
