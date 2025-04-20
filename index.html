@@ -278,51 +278,6 @@
             border-radius: 8px;
             margin: 40px 0;
         }
-
-        .countdown-container {
-            margin: 30px auto;
-            text-align: center;
-            background-color: rgba(215, 137, 46, 0.15);
-            color: var(--primary-color);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 400px;
-            border: 2px dashed var(--secondary-color);
-        }
-        
-        .countdown-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 12px;
-            color: var(--primary-color);
-        }
-        
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            margin-top: 5px;
-        }
-        
-        .countdown-box {
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 4px;
-            padding: 8px;
-            margin: 0 8px;
-            min-width: 60px;
-        }
-        
-        .countdown-value {
-            font-size: 28px;
-            font-weight: bold;
-            line-height: 1;
-        }
-        
-        .countdown-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            margin-top: 4px;
-        }
         
         .testimonial {
             border-left: 4px solid var(--primary-color);
@@ -1094,23 +1049,6 @@
                     <p>This could disappear very soon.</p>
                 </div>
                 
-                <div class="countdown-container">
-                    <div class="countdown-title">OFFER EXPIRES IN:</div>
-                    <div class="countdown-timer">
-                        <div class="countdown-box">
-                            <div class="countdown-value" id="days">05</div>
-                            <div class="countdown-label">days</div>
-                        </div>
-                        <div class="countdown-box">
-                            <div class="countdown-value" id="hours">12</div>
-                            <div class="countdown-label">hours</div>
-                        </div>
-                        <div class="countdown-box">
-                            <div class="countdown-value" id="minutes">32</div>
-                            <div class="countdown-label">mins</div>
-                        </div>
-                    </div>
-                </div>
                 
                 <h2>Imagine Your First Successful Project</h2>
                 
@@ -1339,36 +1277,6 @@
         // For a truly dynamic countdown, you would set a future date
         // This simple version updates the display but doesn't actually count down
         // To make it fully functional, replace with a proper countdown to a specific date
-        
-        function updateCountdown() {
-            const now = new Date();
-            const days = document.getElementById('days');
-            const hours = document.getElementById('hours');
-            const minutes = document.getElementById('minutes');
-            
-            // Decrease minutes
-            let mins = parseInt(minutes.innerText);
-            mins -= 1;
-            if (mins < 0) {
-                mins = 59;
-                // Decrease hours
-                let hrs = parseInt(hours.innerText);
-                hrs -= 1;
-                if (hrs < 0) {
-                    hrs = 23;
-                    // Decrease days
-                    let dys = parseInt(days.innerText);
-                    dys -= 1;
-                    if (dys < 0) dys = 0;
-                    days.innerText = dys.toString().padStart(2, '0');
-                }
-                hours.innerText = hrs.toString().padStart(2, '0');
-            }
-            minutes.innerText = mins.toString().padStart(2, '0');
-        }
-        
-        // Update countdown every minute
-        setInterval(updateCountdown, 60000);
         
         // JavaScript to track engagement events and Taboola conversions
         document.addEventListener('DOMContentLoaded', function() {
