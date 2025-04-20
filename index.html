@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ted's Woodworking Blueprint Vault - Transform Your Woodworking Skills</title>
+    <title>DIY SPOTLIGHT: Military Veteran Shares Woodworking Secrets That Save Thousands</title>
     <!-- Taboola Pixel Code -->
     <script type='text/javascript'>
       window._tfa = window._tfa || [];
@@ -36,58 +35,136 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.45;
-            color: var(--text-color);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            color: #333;
             background-color: #fff;
             font-size: 18px;
         }
         
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
         /* Header Section */
         header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
         }
         
-        header p {
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-logo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+            text-decoration: none;
+        }
+        
+        .site-nav a {
+            color: #444;
+            text-decoration: none;
+            margin-left: 20px;
             font-size: 16px;
-            margin-top: 5px;
-            color: var(--accent-color);
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(93, 64, 55, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
+        /* Article Header */
+        .article-header {
+            padding: 30px 0 20px;
+            border-bottom: 1px solid #eee;
         }
         
-        .hero h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
+        .article-section {
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .article-title {
+            font-size: 36px;
             line-height: 1.2;
+            margin: 15px 0;
+            color: #222;
         }
         
-        .hero h2 {
+        .article-subtitle {
             font-size: 22px;
             font-weight: normal;
-            margin-bottom: 20px;
             font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .article-byline {
+            font-weight: bold;
+            color: #444;
+        }
+        
+        .article-date {
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px solid #ddd;
+        }
+        
+        .article-share {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .share-icon {
+            color: #555;
+            font-size: 18px;
         }
         
         /* Content Sections */
-        section {
-            padding: 40px 0;
+        .article-content {
+            padding: 30px 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .article-content {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .main-content {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .sidebar {
+            padding-left: 20px;
         }
         
         .warning-bar {
@@ -100,21 +177,44 @@
             margin-bottom: 30px;
         }
         
-        h2 {
-            font-size: 32px;
-            margin-bottom: 25px;
+        .drop-cap:first-letter {
+            float: left;
+            font-size: 75px;
+            line-height: 60px;
+            padding-right: 8px;
+            padding-top: 4px;
             color: var(--primary-color);
+            font-family: "Times New Roman", Times, serif;
+        }
+        
+        h2 {
+            font-size: 28px;
+            margin: 35px 0 20px;
+            color: #222;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 10px;
         }
         
         h3 {
-            font-size: 28px;
-            margin: 35px 0 20px;
-            color: var(--primary-color);
+            font-size: 24px;
+            margin: 25px 0 15px;
+            color: #333;
         }
         
         p {
             margin-bottom: 20px;
             font-size: 18px;
+        }
+        
+        .pullquote {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            line-height: 1.4;
+            color: var(--primary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px 20px;
+            margin: 30px 0;
+            font-style: italic;
         }
         
         .story {
@@ -416,12 +516,277 @@
             margin: 40px 0;
         }
         
+        /* Sidebar */
+        .sidebar-section {
+            background-color: #f9f7f3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-heading {
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .related-articles {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .related-articles li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .related-articles li:last-child {
+            border-bottom: none;
+        }
+        
+        .related-articles a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .about-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .author-bio {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
         /* Footer */
         footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 30px 0;
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+        
+        .footer-heading {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #555;
+        }
+        
+        .footer-links {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 20px;
             text-align: center;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        /* Facebook-style Comments Section Styling */
+        .fb-comments-section {
+            margin: 40px 0 0;
+            padding-bottom: 20px;
+            background-color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        .comments-container {
+            max-width: 100%;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 12px 16px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comments-heading {
+            font-size: 16px;
+            font-weight: 600;
+            color: #050505;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ebee;
+        }
+    
+        
+        .comment-avatar {
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        
+        .comment-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #dddfe2;
+        }
+        
+        .comment-box {
+            flex-grow: 1;
+        }
+        
+        .comment-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 20px;
+            background-color: #f0f2f5;
+            font-size: 13px;
+        }
+        
+        .comments-list {
+            margin-bottom: 10px;
+        }
+        
+        .comment {
+            display: flex;
+            margin-bottom: 12px;
+            padding-bottom: 2px;
+        }
+        
+        .comment-content {
+            flex-grow: 1;
+            margin-left: 8px;
+        }
+        
+        .comment-header {
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .comment-author {
+            font-weight: 600;
+            color: #385898;
+            font-size: 13px;
+        }
+        
+        .comment-author:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .comment-location {
+            color: #616770;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        
+        .comment-badge {
+            background-color: #4267B2;
+            color: white;
+            font-size: 11px;
+            padding: 1px 4px;
+            border-radius: 2px;
+            margin-left: 5px;
+            font-weight: 500;
+        }
+        
+        .comment-bubble {
+            background-color: #f0f2f5;
+            border-radius: 18px;
+            padding: 8px 12px;
+            margin: 0;
+            display: inline-block;
+            max-width: 100%;
+        }
+        
+        .comment-bubble p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.35;
+            color: #1c1e21;
+        }
+        
+        .comment-actions {
+            display: flex;
+            align-items: center;
+            margin-top: 2px;
+            padding-left: 12px;
+            font-size: 12px;
+            color: #65676b;
+        }
+        
+        .action {
+            cursor: pointer;
+            font-weight: 600;
+            color: #65676b;
+        }
+        
+        .action:hover {
+            text-decoration: underline;
+        }
+        
+        .dot {
+            margin: 0 4px;
+            color: #65676b;
+        }
+        
+        .comment-time {
+            color: #65676b;
+        }
+        
+        .likes-count {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            color: #65676b;
+            font-size: 12px;
+        }
+        
+        .thumbs-up {
+            font-size: 12px;
+            margin-right: 3px;
+        }
+        
+        .comment-reply {
+            display: flex;
+            margin-top: 5px;
+            margin-left: 20px;
+            padding-left: 4px;
+            border-left: 2px solid #e9ebee;
+        }
+        
+        .comment-reply .comment-content {
+            flex-grow: 1;
+        }
+        
+        .comments-load-more {
+            text-align: center;
+            margin-top: 15px;
         }
         
         /* Mobile Responsiveness */
@@ -430,20 +795,29 @@
                 font-size: 16px;
             }
             
-            .hero h1 {
-                font-size: 30px;
+            .article-title {
+                font-size: 28px;
             }
             
-            .hero h2 {
+            .article-subtitle {
                 font-size: 18px;
             }
             
+            .article-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                padding-left: 0;
+                margin-top: 40px;
+            }
+            
             h2 {
-                font-size: 26px;
+                font-size: 24px;
             }
             
             h3 {
-                font-size: 22px;
+                font-size: 20px;
             }
             
             .benefit, .price-box {
@@ -464,94 +838,27 @@
                 font-size: 18px;
             }
             
-            .countdown-container {
-                max-width: 90%;
-                padding: 15px;
+            .footer-section {
+                width: 100%;
             }
             
-            .countdown-title {
-                font-size: 16px;
+            .comments-container {
+                padding: 10px;
             }
             
-            .countdown-box {
-                padding: 6px;
-                min-width: 50px;
-                margin: 0 4px;
-            }
-            
-            .countdown-value {
-                font-size: 22px;
-            }
-            
-            .countdown-label {
-                font-size: 10px;
-            }
-            
-            .sticky-cta {
-                bottom: 15px;
-                right: 15px;
-                padding: 12px 20px;
-                font-size: 16px;
-                width: auto;
-            }
-            
-            /* Image optimization for mobile */
-            .image-container {
-                margin: 20px 0;
-            }
-            
-            .image-container img {
-                width: 100% !important;
-                height: auto !important;
-                object-fit: contain;
-            }
-            
-            .image-caption {
-                font-size: 14px;
-                margin-top: 8px;
-            }
-            
-            /* Improve readability on mobile */
-            p, li {
-                font-size: 16px;
-                line-height: 1.5;
-            }
-            
-            .testimonial {
-                padding: 12px 15px;
-            }
-            
-            .highlight-box {
-                padding: 12px 15px;
-                margin: 20px 0;
-            }
-            
-            /* Improve touch targets for mobile */
-            li {
-                margin-bottom: 15px;
-            }
-            
-            .check-list li, .x-list li {
-                padding-left: 30px;
+            .comment-bubble p {
+                font-size: 13px;
             }
         }
         
         /* Small mobile screens */
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 26px;
+            .article-title {
+                font-size: 24px;
             }
             
-            .hero h2 {
+            .article-subtitle {
                 font-size: 16px;
-            }
-            
-            h2 {
-                font-size: 22px;
-            }
-            
-            h3 {
-                font-size: 20px;
             }
             
             .container {
@@ -582,621 +889,485 @@
             .cta-section {
                 padding: 30px 15px;
             }
+            
+            .comment-reply {
+                margin-left: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <p>EXCLUSIVE OFFER FOR SERIOUS DIYers</p>
+        <div class="container site-header">
+            <a href="#" class="site-logo">DIY WEEKLY</a>
+            <nav class="site-nav">
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">Tools</a>
+                <a href="#">Reviews</a>
+            </nav>
         </div>
     </header>
     
-    <div class="hero">
-        <div class="container">
-            <h1>63-Year-Old With Bad Knees Builds $3,800 Shed Using "Forgotten Blueprint Vault"</h1>
-            <h2 style = "color: white">"I couldn't even build a birdhouse before discovering this military veteran's woodworking secret"</h2>
-            <!-- Removed redundant text box here -->
-        </div>
-    </div>
-    
-    <section>
-        <div class="container">
+    <div class="container">
+        <div class="article-header">
+            <div class="article-section">FEATURE STORY</div>
+            <h1 class="article-title">63-Year-Old With Bad Knees Builds $3,800 Shed Using "Forgotten Blueprint Vault"</h1>
+            <h2 class="article-subtitle">"I couldn't even build a birdhouse before discovering this military veteran's woodworking secret"</h2>
+            
+            <div class="article-meta">
+                <img src="/api/placeholder/50/50" alt="Jim Reynolds" class="author-image">
+                <div>
+                    <span class="article-byline">By Jim Reynolds</span>
+                    <span class="article-date">April 18, 2025</span>
+                </div>
+                <div class="article-share">
+                    <span class="share-icon">📱</span>
+                    <span class="share-icon">✉️</span>
+                    <span class="share-icon">🔗</span>
+                </div>
+            </div>
+            
             <div class="warning-bar">
                 Warning: This page will be removed when Ted implements his new membership structure.
             </div>
-            
-            <p>Today, I'm building furniture that people offer to BUY from me.</p>
-            
-            <p>The difference?</p>
-            
-            <p><strong>A "Blueprint Vault" that professional woodworkers are desperately trying to keep secret.</strong></p>
-            
-            <div class="image-container">
-                <img src="images/ad pic.png" alt="Before and after woodworking transformation" />
-            </div>
-            
-            <h3>My Embarrassing Woodworking Story</h3>
-            
-            <p>After 30 years of military and construction work, my knees were shot.</p>
-            
-            <p>My tools gathered dust.</p>
-            
-            <p>And my pride took a serious hit when I couldn't even build a simple toy for my grandson.</p>
-            
-            <div class="image-container">
-                <img src="images/crib.jpg" alt="Handmade oak crib with surprised daughter" />
-            </div>
-            
-            <p>Then everything changed with one mysterious text.</p>
-            
-            <h3>The Text Message That Transformed My Retirement</h3>
-            
-            <div class="highlight-box">
-                <p>"Don't share this with anyone else," my Army buddy Frank wrote.</p>
-                <p>The link looked suspicious. Almost deleted it.</p>
-                <p>But thank God I didn't.</p>
-            </div>
-            
-            <p>What I discovered has now helped <strong>20,000+ regular guys</strong> build professional-quality furniture with:</p>
-            
-            <ul class="check-list">
-                <li>NO woodworking experience needed</li>
-                <li>NO expensive tools required</li>
-                <li>NO wasted materials</li>
-                <li>NO complicated measurements</li>
-            </ul>
-            
-            <div class="image-container">
-                <img src="images/garage.jpg" style = "width: 500px; height: 400px" alt="Before/after garage transformation" />
-            </div>
-            
-            <h2>The "Shortcut Secret" That Changed Everything</h2>
-            
-            <p>A master craftsman named Ted McGrath had created something revolutionary.</p>
-            
-            <p>Not just random plans...</p>
-            
-            <p>A complete <strong>"Blueprint Vault"</strong> with over 16,000 step-by-step woodworking plans designed specifically for regular guys like us.</p>
-            
-            <p>Imagine having a master woodworker standing behind you, guiding every cut, every measurement, every step.</p>
-            
-            <p>That's what this feels like.</p>
-            
-            <h2>What Makes This Different? (This Is Critical)</h2>
-            
-            <p>I've tried EVERYTHING:</p>
-            
-            <ul class="x-list">
-                <li>YouTube tutorials (they always skip the complicated parts)</li>
-                <li>Free online plans (measurements never worked)</li>
-                <li>Expensive woodworking books (too complicated)</li>
-                <li>Local classes (too fast-paced and expensive)</li>
-            </ul>
-            
-            <p>Ted's approach eliminates ALL these problems.</p>
-            
-            <p>Each blueprint gives you:</p>
-            
-            <ul class="check-list">
-                <li>Exact material lists (no more buying wrong stuff)</li>
-                <li>Precise cutting diagrams (showing exactly where to cut)</li>
-                <li>3D renderings (see your project from every angle)</li>
-                <li>Step-by-step instructions (nothing left to guesswork)</li>
-                <li>Difficulty ratings (start easy, build confidence fast)</li>
-            </ul>
-            
-            <div class="image-container">
-                <img src="images/blueprint.jpg" alt="Ted's blueprint system features" />
-                <p class="image-caption">Ted's blueprint system showing callouts for each feature mentioned above</p>
-            </div>
-            
-            <h2>How Much Would You Pay For Custom Furniture?</h2>
-            
-            <div class="price-comparison">
-                <div class="retail-price">
-                    <h3>Store-Bought Custom Crib</h3>
-                    <div class="price">$1,200</div>
-                    <p>Factory-made with limited options</p>
+        </div>
+        
+        <div class="article-content">
+            <div class="main-content">
+                <p class="drop-cap">Today, I'm building furniture that people offer to BUY from me. The difference? A "Blueprint Vault" that professional woodworkers are desperately trying to keep secret.</p>
+                
+                <div class="image-container">
+                    <img src="images/ad pic.png" alt="Before and after woodworking transformation" />
                 </div>
                 
-                <div class="your-price">
-                    <h3>My DIY Crib Using Ted's Plans</h3>
-                    <div class="price">$120</div>
-                    <p>Custom-made with premium materials</p>
-                </div>
-            </div>
-            
-            <p>My daughter was quoted $1,200 for a custom baby crib.</p>
-            
-            <p>My first project using Ted's plans? That exact same crib.</p>
-            
-            <p>Total cost: $120 in materials and one weekend.</p>
-            
-            <p>She thought I'd bought it from an expensive store until I showed her the sawdust still in my garage.</p>
-            
-            <h2>From "DIY Disaster" to "How Did You Make That?"</h2>
-            
-            <p>Let me be absolutely clear:</p>
-            
-            <div class="highlight-box">
-                <p>I have no special talent. I'm just a regular 63-year-old guy with bad knees.</p>
-            </div>
-            
-            <p>But in just 8 weeks, I've built:</p>
-            
-            <ul class="check-list">
-                <li>A rocking chair that looks like it costs $800+ (cost me $95)</li>
-                <li>A backyard shed that saved me $3,200 vs. contractor quotes</li>
-                <li>A writing desk my daughter says "looks like it belongs in a magazine"</li>
-                <li>Workshop storage that organized 20 years of accumulated tools</li>
-            </ul>
-            
-            <h2>The Movement Spreading Like Wildfire</h2>
-            
-            <p>Over 20,000 men have discovered Ted's Blueprint Vault, with stunning results:</p>
-            
-            <div class="testimonials">
-                <div class="testimonial">
-                    <p><strong>John - 53 (Texas):</strong> "Built an entire bedroom set that would have cost $3,200 retail."</p>
+                <h2>My Embarrassing Woodworking Story</h2>
+                
+                <p>After 30 years of military and construction work, my knees were shot.</p>
+                
+                <p>My tools gathered dust.</p>
+                
+                <p>And my pride took a serious hit when I couldn't even build a simple toy for my grandson.</p>
+                
+                <div class="image-container">
+                    <img src="images/crib.jpg" alt="Handmade oak crib with surprised daughter" />
                 </div>
                 
-                <div class="testimonial">
-                    <p><strong>Mike - 44 (Oregon):</strong> "Constructed a complete backyard workshop using just one weekend and one set of plans."</p>
+                <p>Then everything changed with one mysterious text.</p>
+                
+                <h2>The Text Message That Transformed My Retirement</h2>
+                
+                <div class="pullquote">
+                    "Don't share this with anyone else," my Army buddy Frank wrote. The link looked suspicious. Almost deleted it. But thank God I didn't.
                 </div>
                 
-                <div class="testimonial">
-                    <p><strong>Robert - 61 (Chicago):</strong> "Now makes toys for my grandchildren and sells them at local craft fairs for extra income."</p>
-                </div>
-            </div>
-            
-            <p class="highlight-box">What would YOU build this weekend if failure wasn't possible?</p>
-            
-            <div class="cta-section">
-                <h3>Ready to Start Building Like a Pro?</h3>
-                <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="cta-button">See Ted's Blueprints Now »</a>
-            </div>
-            
-            <h2>URGENT: Why This Is About To Disappear</h2>
-            
-            <div class="urgency">
-                <p>Ted recently revealed something concerning.</p>
+                <p>What I discovered has now helped <strong>20,000+ regular guys</strong> build professional-quality furniture with:</p>
                 
-                <p>"I created this vault for my private students. The online demand has become overwhelming."</p>
-                
-                <p>Three changes are coming VERY soon:</p>
-                
-                <ul>
-                    <li><strong>MEMBERSHIP CAP:</strong> New enrollments will be limited to control growth</li>
-                    <li><strong>PRICE INCREASE:</strong> Current $67 access will jump to $197, then to $297</li>
-                    <li><strong>PLAN REMOVAL:</strong> Several premium plans will become "advanced members only"</li>
+                <ul class="check-list">
+                    <li>NO woodworking experience needed</li>
+                    <li>NO expensive tools required</li>
+                    <li>NO wasted materials</li>
+                    <li>NO complicated measurements</li>
                 </ul>
                 
-                <p>Professional woodworking associations are pressuring Ted to stop "giving away their secrets."</p>
-                
-                <p>This could disappear very soon.</p>
-            </div>
-            
-            <div class="countdown-container">
-                <div class="countdown-title">OFFER EXPIRES IN:</div>
-                <div class="countdown-timer">
-                    <div class="countdown-box">
-                        <div class="countdown-value" id="days">05</div>
-                        <div class="countdown-label">days</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-value" id="hours">12</div>
-                        <div class="countdown-label">hours</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-value" id="minutes">32</div>
-                        <div class="countdown-label">mins</div>
-                    </div>
+                <div class="image-container">
+                    <img src="images/garage.jpg" style = "width: 500px; height: 400px" alt="Before/after garage transformation" />
                 </div>
-            </div>
-            
-            <h2>Imagine Your First Successful Project</h2>
-            
-            <p>Think about standing back THIS WEEKEND saying "I built that!"</p>
-            
-            <p>Picture your wife's face when she sees what you've created.</p>
-            
-            <p>Imagine the money saved by building instead of buying.</p>
-            
-            <p>There's nothing like the pride of creating something with your own hands.</p>
-            
-            <p>And it's all possible with the right blueprints guiding you every step of the way.</p>
-            
-            <h3>One Final Question</h3>
-            
-            <p>Are you content watching TV while your tools gather dust?</p>
-            
-            <p>Or are you ready to create beautiful, useful things your family will cherish for generations?</p>
-            
-            <p>The choice is yours, but only for a limited time.</p>
-            
-            <div class="cta-section">
-                <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="cta-button">Click Here To See Ted's Blueprints Before The Price Triples »</a>
                 
-                <p style="margin-top: 30px;"><strong>P.S.</strong> Ted is including FOUR special bonuses with every access pass, including his exclusive "Woodworking Secrets" video series ($197 value). These bonuses disappear when the new pricing takes effect.</p>
+                <h2>The "Shortcut Secret" That Changed Everything</h2>
                 
-                <p style="margin-top: 20px;"><strong>P.P.S.</strong> Your purchase is protected by Ted's 60-day, 100% money-back guarantee. If you're not completely satisfied, simply email Ted for a full refund, no questions asked.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Facebook-style Comments Section -->
-<section class="fb-comments-section">
-    <div class="container">
-        <div class="comments-container">
-            <h3 class="comments-heading">Comments</h3>
-            
-            
-            <div class="comments-list">
-                <!-- Comment 1 - Positive -->
-                <div class="comment">
-                    <div class="comment-avatar">
-                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Mike Johnson" />
+                <p>A master craftsman named Ted McGrath had created something revolutionary.</p>
+                
+                <p>Not just random plans...</p>
+                
+                <p>A complete <strong>"Blueprint Vault"</strong> with over 16,000 step-by-step woodworking plans designed specifically for regular guys like us.</p>
+                
+                <p>Imagine having a master woodworker standing behind you, guiding every cut, every measurement, every step.</p>
+                
+                <p>That's what this feels like.</p>
+                
+                <h2>What Makes This Different? (This Is Critical)</h2>
+                
+                <p>I've tried EVERYTHING:</p>
+                
+                <ul class="x-list">
+                    <li>YouTube tutorials (they always skip the complicated parts)</li>
+                    <li>Free online plans (measurements never worked)</li>
+                    <li>Expensive woodworking books (too complicated)</li>
+                    <li>Local classes (too fast-paced and expensive)</li>
+                </ul>
+                
+                <p>Ted's approach eliminates ALL these problems.</p>
+                
+                <p>Each blueprint gives you:</p>
+                
+                <ul class="check-list">
+                    <li>Exact material lists (no more buying wrong stuff)</li>
+                    <li>Precise cutting diagrams (showing exactly where to cut)</li>
+                    <li>3D renderings (see your project from every angle)</li>
+                    <li>Step-by-step instructions (nothing left to guesswork)</li>
+                    <li>Difficulty ratings (start easy, build confidence fast)</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="images/blueprint.jpg" alt="Ted's blueprint system features" />
+                    <p class="image-caption">Ted's blueprint system showing callouts for each feature mentioned above</p>
+                </div>
+                
+                <h2>How Much Would You Pay For Custom Furniture?</h2>
+                
+                <div class="price-comparison">
+                    <div class="retail-price">
+                        <h3>Store-Bought Custom Crib</h3>
+                        <div class="price">$1,200</div>
+                        <p>Factory-made with limited options</p>
                     </div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <span class="comment-author">Mike Johnson</span>
-                            <span class="comment-location">Denver, CO</span>
-                        </div>
-                        <div class="comment-bubble">
-                            <p>Just finished my first project using Ted's plans. Built a coffee table that my wife absolutely loves! The measurements were spot on and I didn't waste any materials. Totally worth it!</p>
-                        </div>
-                        <div class="comment-actions">
-                            <span class="action">Like</span>
-                            <span class="dot">·</span>
-                            <span class="action">Reply</span>
-                            <span class="dot">·</span>
-                            <span class="comment-time">5 hrs</span>
-                            <div class="likes-count"><span class="thumbs-up">👍</span>12</div>
-                        </div>
+                    
+                    <div class="your-price">
+                        <h3>My DIY Crib Using Ted's Plans</h3>
+                        <div class="price">$120</div>
+                        <p>Custom-made with premium materials</p>
                     </div>
                 </div>
                 
-                <!-- Comment 2 - Positive -->
-                <div class="comment">
-                    <div class="comment-avatar">
-                        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Robert Wilson" />
+                <p>My daughter was quoted $1,200 for a custom baby crib.</p>
+                
+                <p>My first project using Ted's plans? That exact same crib.</p>
+                
+                <p>Total cost: $120 in materials and one weekend.</p>
+                
+                <p>She thought I'd bought it from an expensive store until I showed her the sawdust still in my garage.</p>
+                
+                <h2>From "DIY Disaster" to "How Did You Make That?"</h2>
+                
+                <p>Let me be absolutely clear:</p>
+                
+                <div class="pullquote">
+                    I have no special talent. I'm just a regular 63-year-old guy with bad knees.
+                </div>
+                
+                <p>But in just 8 weeks, I've built:</p>
+                
+                <ul class="check-list">
+                    <li>A rocking chair that looks like it costs $800+ (cost me $95)</li>
+                    <li>A backyard shed that saved me $3,200 vs. contractor quotes</li>
+                    <li>A writing desk my daughter says "looks like it belongs in a magazine"</li>
+                    <li>Workshop storage that organized 20 years of accumulated tools</li>
+                </ul>
+                
+                <h2>The Movement Spreading Like Wildfire</h2>
+                
+                <p>Over 20,000 men have discovered Ted's Blueprint Vault, with stunning results:</p>
+                
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <p><strong>John - 53 (Texas):</strong> "Built an entire bedroom set that would have cost $3,200 retail."</p>
                     </div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <span class="comment-author">Robert Wilson</span>
-                            <span class="comment-location">Austin, TX</span>
+                    
+                    <div class="testimonial">
+                        <p><strong>Mike - 44 (Oregon):</strong> "Constructed a complete backyard workshop using just one weekend and one set of plans."</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <p><strong>Robert - 61 (Chicago):</strong> "Now makes toys for my grandchildren and sells them at local craft fairs for extra income."</p>
+                    </div>
+                </div>
+                
+                <div class="pullquote">
+                    What would YOU build this weekend if failure wasn't possible?
+                </div>
+                
+                <div class="cta-section">
+                    <h3>Ready to Start Building Like a Pro?</h3>
+                    <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="cta-button">See Ted's Blueprints Now »</a>
+                </div>
+                
+                <h2>URGENT: Why This Is About To Disappear</h2>
+                
+                <div class="urgency">
+                    <p>Ted recently revealed something concerning.</p>
+                    
+                    <p>"I created this vault for my private students. The online demand has become overwhelming."</p>
+                    
+                    <p>Three changes are coming VERY soon:</p>
+                    
+                    <ul>
+                        <li><strong>MEMBERSHIP CAP:</strong> New enrollments will be limited to control growth</li>
+                        <li><strong>PRICE INCREASE:</strong> Current $67 access will jump to $197, then to $297</li>
+                        <li><strong>PLAN REMOVAL:</strong> Several premium plans will become "advanced members only"</li>
+                    </ul>
+                    
+                    <p>Professional woodworking associations are pressuring Ted to stop "giving away their secrets."</p>
+                    
+                    <p>This could disappear very soon.</p>
+                </div>
+                
+                <div class="countdown-container">
+                    <div class="countdown-title">OFFER EXPIRES IN:</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="days">05</div>
+                            <div class="countdown-label">days</div>
                         </div>
-                        <div class="comment-bubble">
-                            <p>Been using Ted's blueprints for 3 months now. Built a shed that would have cost me over $4K to have professionally done, but I only spent about $900 on materials. The step-by-step instructions are perfect for someone with limited experience like me.</p>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="hours">12</div>
+                            <div class="countdown-label">hours</div>
                         </div>
-                        <div class="comment-actions">
-                            <span class="action">Like</span>
-                            <span class="dot">·</span>
-                            <span class="action">Reply</span>
-                            <span class="dot">·</span>
-                            <span class="comment-time">1 day</span>
-                            <div class="likes-count"><span class="thumbs-up">👍</span>24</div>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="minutes">32</div>
+                            <div class="countdown-label">mins</div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Comment 3 - Question -->
-                <div class="comment">
-                    <div class="comment-avatar">
-                        <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="James Parker" />
-                    </div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <span class="comment-author">James Parker</span>
-                            <span class="comment-location">Tucson, AZ</span>
-                        </div>
-                        <div class="comment-bubble">
-                            <p>Does anyone know if these plans work with metric measurements? I'm in the US but prefer working with metrics for precision.</p>
-                        </div>
-                        <div class="comment-actions">
-                            <span class="action">Like</span>
-                            <span class="dot">·</span>
-                            <span class="action">Reply</span>
-                            <span class="dot">·</span>
-                            <span class="comment-time">2 days</span>
-                            <div class="likes-count"><span class="thumbs-up">👍</span>3</div>
-                        </div>
+                <h2>Imagine Your First Successful Project</h2>
+                
+                <p>Think about standing back THIS WEEKEND saying "I built that!"</p>
+                
+                <p>Picture your wife's face when she sees what you've created.</p>
+                
+                <p>Imagine the money saved by building instead of buying.</p>
+                
+                <p>There's nothing like the pride of creating something with your own hands.</p>
+                
+                <p>And it's all possible with the right blueprints guiding you every step of the way.</p>
+                
+                <h3>One Final Question</h3>
+                
+                <p>Are you content watching TV while your tools gather dust?</p>
+                
+                <p>Or are you ready to create beautiful, useful things your family will cherish for generations?</p>
+                
+                <p>The choice is yours, but only for a limited time.</p>
+                
+                <div class="cta-section">
+                    <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="cta-button">Click Here To See Ted's Blueprints Before The Price Triples »</a>
+                    
+                    <p style="margin-top: 30px;"><strong>P.S.</strong> Ted is including FOUR special bonuses with every access pass, including his exclusive "Woodworking Secrets" video series ($197 value). These bonuses disappear when the new pricing takes effect.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>P.P.S.</strong> Your purchase is protected by Ted's 60-day, 100% money-back guarantee. If you're not completely satisfied, simply email Ted for a full refund, no questions asked.</p>
+                </div>
+                
+                <!-- Facebook-style Comments Section -->
+                <section class="fb-comments-section">
+                    <div class="comments-container">
+                        <h3 class="comments-heading">Comments</h3>
                         
-                        <!-- Reply to question -->
-                        <div class="comment-reply">
-                            <div class="comment-avatar">
-                                <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Ted McGrath" />
+                        <div class="comments-list">
+                            <!-- Comment 1 - Positive -->
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Mike Johnson" />
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="comment-author">Mike Johnson</span>
+                                        <span class="comment-location">Denver, CO</span>
+                                    </div>
+                                    <div class="comment-bubble">
+                                        <p>Just finished my first project using Ted's plans. Built a coffee table that my wife absolutely loves! The measurements were spot on and I didn't waste any materials. Totally worth it!</p>
+                                    </div>
+                                    <div class="comment-actions">
+                                        <span class="action">Like</span>
+                                        <span class="dot">·</span>
+                                        <span class="action">Reply</span>
+                                        <span class="dot">·</span>
+                                        <span class="comment-time">5 hrs</span>
+                                        <div class="likes-count"><span class="thumbs-up">👍</span>12</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="comment-content">
-                                <div class="comment-header">
-                                    <span class="comment-author">Ted McGrath</span>
-                                    <span class="comment-badge">Creator</span>
+                            
+                            <!-- Comment 2 - Positive -->
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Robert Wilson" />
                                 </div>
-                                <div class="comment-bubble">
-                                    <p>Hi James! Yes, all plans come with both imperial and metric measurements. You can toggle between them in the PDF files.</p>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="comment-author">Robert Wilson</span>
+                                        <span class="comment-location">Austin, TX</span>
+                                    </div>
+                                    <div class="comment-bubble">
+                                        <p>Been using Ted's blueprints for 3 months now. Built a shed that would have cost me over $4K to have professionally done, but I only spent about $900 on materials. The step-by-step instructions are perfect for someone with limited experience like me.</p>
+                                    </div>
+                                    <div class="comment-actions">
+                                        <span class="action">Like</span>
+                                        <span class="dot">·</span>
+                                        <span class="action">Reply</span>
+                                        <span class="dot">·</span>
+                                        <span class="comment-time">1 day</span>
+                                        <div class="likes-count"><span class="thumbs-up">👍</span>24</div>
+                                    </div>
                                 </div>
-                                <div class="comment-actions">
-                                    <span class="action">Like</span>
-                                    <span class="dot">·</span>
-                                    <span class="action">Reply</span>
-                                    <span class="dot">·</span>
-                                    <span class="comment-time">1 day</span>
-                                    <div class="likes-count"><span class="thumbs-up">👍</span>6</div>
+                            </div>
+                            
+                            <!-- Comment 3 - Question -->
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="James Parker" />
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="comment-author">James Parker</span>
+                                        <span class="comment-location">Tucson, AZ</span>
+                                    </div>
+                                    <div class="comment-bubble">
+                                        <p>Does anyone know if these plans work with metric measurements? I'm in the US but prefer working with metrics for precision.</p>
+                                    </div>
+                                    <div class="comment-actions">
+                                        <span class="action">Like</span>
+                                        <span class="dot">·</span>
+                                        <span class="action">Reply</span>
+                                        <span class="dot">·</span>
+                                        <span class="comment-time">2 days</span>
+                                        <div class="likes-count"><span class="thumbs-up">👍</span>3</div>
+                                    </div>
+                                    
+                                    <!-- Reply to question -->
+                                    <div class="comment-reply">
+                                        <div class="comment-avatar">
+                                            <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Ted McGrath" />
+                                        </div>
+                                        <div class="comment-content">
+                                            <div class="comment-header">
+                                                <span class="comment-author">Ted McGrath</span>
+                                                <span class="comment-badge">Creator</span>
+                                            </div>
+                                            <div class="comment-bubble">
+                                                <p>Hi James! Yes, all plans come with both imperial and metric measurements. You can toggle between them in the PDF files.</p>
+                                            </div>
+                                            <div class="comment-actions">
+                                                <span class="action">Like</span>
+                                                <span class="dot">·</span>
+                                                <span class="action">Reply</span>
+                                                <span class="dot">·</span>
+                                                <span class="comment-time">1 day</span>
+                                                <div class="likes-count"><span class="thumbs-up">👍</span>6</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 4 - Neutral -->
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="David Cooper" />
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="comment-author">David Cooper</span>
+                                        <span class="comment-location">Columbus, OH</span>
+                                    </div>
+                                    <div class="comment-bubble">
+                                        <p>The plans are good but I wish there were more video tutorials to go with them. I'm more of a visual learner. That said, I was still able to build a nice bookshelf following the instructions.</p>
+                                    </div>
+                                    <div class="comment-actions">
+                                        <span class="action">Like</span>
+                                        <span class="dot">·</span>
+                                        <span class="action">Reply</span>
+                                        <span class="dot">·</span>
+                                        <span class="comment-time">3 days</span>
+                                        <div class="likes-count"><span class="thumbs-up">👍</span>6</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 5 - Positive -->
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Thomas Wright" />
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="comment-author">Thomas Wright</span>
+                                        <span class="comment-location">Portland, OR</span>
+                                    </div>
+                                    <div class="comment-bubble">
+                                        <p>As a 68-year-old retiree with arthritis, I was skeptical if I could still do woodworking. Ted's plans are so clear that I've completed 3 projects already. The cutting diagrams saved me so much frustration! Looking forward to building the Adirondack chairs next weekend.</p>
+                                    </div>
+                                    <div class="comment-actions">
+                                        <span class="action">Like</span>
+                                        <span class="dot">·</span>
+                                        <span class="action">Reply</span>
+                                        <span class="dot">·</span>
+                                        <span class="comment-time">5 days</span>
+                                        <div class="likes-count"><span class="thumbs-up">👍</span>19</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Comment 4 - Neutral -->
-                <div class="comment">
-                    <div class="comment-avatar">
-                        <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="David Cooper" />
-                    </div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <span class="comment-author">David Cooper</span>
-                            <span class="comment-location">Columbus, OH</span>
-                        </div>
-                        <div class="comment-bubble">
-                            <p>The plans are good but I wish there were more video tutorials to go with them. I'm more of a visual learner. That said, I was still able to build a nice bookshelf following the instructions.</p>
-                        </div>
-                        <div class="comment-actions">
-                            <span class="action">Like</span>
-                            <span class="dot">·</span>
-                            <span class="action">Reply</span>
-                            <span class="dot">·</span>
-                            <span class="comment-time">3 days</span>
-                            <div class="likes-count"><span class="thumbs-up">👍</span>6</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Comment 5 - Positive -->
-                <div class="comment">
-                    <div class="comment-avatar">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Thomas Wright" />
-                    </div>
-                    <div class="comment-content">
-                        <div class="comment-header">
-                            <span class="comment-author">Thomas Wright</span>
-                            <span class="comment-location">Portland, OR</span>
-                        </div>
-                        <div class="comment-bubble">
-                            <p>As a 68-year-old retiree with arthritis, I was skeptical if I could still do woodworking. Ted's plans are so clear that I've completed 3 projects already. The cutting diagrams saved me so much frustration! Looking forward to building the Adirondack chairs next weekend.</p>
-                        </div>
-                        <div class="comment-actions">
-                            <span class="action">Like</span>
-                            <span class="dot">·</span>
-                            <span class="action">Reply</span>
-                            <span class="dot">·</span>
-                            <span class="comment-time">5 days</span>
-                            <div class="likes-count"><span class="thumbs-up">👍</span>19</div>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
             
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">About the Author</h3>
+                    <div class="about-author">
+                        <img src="/api/placeholder/60/60" alt="Jim Reynolds" class="author-image">
+                    </div>
+                    <p class="author-bio">Jim Reynolds is a 63-year-old retired military and construction worker from Portland who discovered woodworking later in life. He now contributes to DIY Weekly, sharing his journey and tips for fellow woodworking enthusiasts.</p>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">Related Stories</h3>
+                    <ul class="related-articles">
+                        <li><a href="#">7 Essential Tools Every DIYer Needs in Their Workshop</a></li>
+                        <li><a href="#">How to Save Thousands on Home Renovations</a></li>
+                        <li><a href="#">Woodworking for Beginners: Start Your Journey Today</a></li>
+                        <li><a href="#">Why Custom Furniture Is Making a Comeback</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">Editor's Pick</h3>
+                    <div class="image-container">
+                        <img src="/api/placeholder/300/200" alt="Modern woodworking techniques">
+                    </div>
+                    <h4 style="margin-top: 10px; font-size: 16px; line-height: 1.4;">The Secret History of Ted McGrath: From Failure to Woodworking Legend</h4>
+                    <p style="font-size: 14px; margin-top: 10px;">Learn how one man's mission to simplify woodworking has transformed thousands of homes across America.</p>
+                    <a href="#" style="color: var(--secondary-color); text-decoration: none; font-weight: bold; font-size: 14px; display: inline-block; margin-top: 10px;">Read Full Story →</a>
+                </div>
+            </div>
         </div>
     </div>
-</section>
-
-<style>
-    /* Facebook-style Comments Section Styling */
-    .fb-comments-section {
-        margin: 40px 0 0;
-        padding-bottom: 20px;
-        background-color: #fff;
-        font-family: Helvetica, Arial, sans-serif;
-    }
-    
-    .comments-container {
-        max-width: 100%;
-        border: 1px solid #dddfe2;
-        border-radius: 8px;
-        background-color: #fff;
-        padding: 12px 16px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    }
-    
-    .comments-heading {
-        font-size: 16px;
-        font-weight: 600;
-        color: #050505;
-        margin-bottom: 15px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #e9ebee;
-    }
-
-    
-    .comment-avatar {
-        width: 32px;
-        height: 32px;
-        margin-right: 8px;
-        flex-shrink: 0;
-    }
-    
-    .comment-avatar img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 1px solid #dddfe2;
-    }
-    
-    .comment-box {
-        flex-grow: 1;
-    }
-    
-    .comment-box input {
-        width: 100%;
-        padding: 8px 12px;
-        border: 1px solid #dddfe2;
-        border-radius: 20px;
-        background-color: #f0f2f5;
-        font-size: 13px;
-    }
-    
-    .comments-list {
-        margin-bottom: 10px;
-    }
-    
-    .comment {
-        display: flex;
-        margin-bottom: 12px;
-        padding-bottom: 2px;
-    }
-    
-    .comment-content {
-        flex-grow: 1;
-        margin-left: 8px;
-    }
-    
-    .comment-header {
-        margin-bottom: 2px;
-        display: flex;
-        align-items: center;
-    }
-    
-    .comment-author {
-        font-weight: 600;
-        color: #385898;
-        font-size: 13px;
-    }
-    
-    .comment-author:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    
-    .comment-location {
-        color: #616770;
-        font-size: 12px;
-        margin-left: 5px;
-    }
-    
-    .comment-badge {
-        background-color: #4267B2;
-        color: white;
-        font-size: 11px;
-        padding: 1px 4px;
-        border-radius: 2px;
-        margin-left: 5px;
-        font-weight: 500;
-    }
-    
-    .comment-bubble {
-        background-color: #f0f2f5;
-        border-radius: 18px;
-        padding: 8px 12px;
-        margin: 0;
-        display: inline-block;
-        max-width: 100%;
-    }
-    
-    .comment-bubble p {
-        margin: 0;
-        font-size: 13px;
-        line-height: 1.35;
-        color: #1c1e21;
-    }
-    
-    .comment-actions {
-        display: flex;
-        align-items: center;
-        margin-top: 2px;
-        padding-left: 12px;
-        font-size: 12px;
-        color: #65676b;
-    }
-    
-    .action {
-        cursor: pointer;
-        font-weight: 600;
-        color: #65676b;
-    }
-    
-    .action:hover {
-        text-decoration: underline;
-    }
-    
-    .dot {
-        margin: 0 4px;
-        color: #65676b;
-    }
-    
-    .comment-time {
-        color: #65676b;
-    }
-    
-    .likes-count {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        color: #65676b;
-        font-size: 12px;
-    }
-    
-    .thumbs-up {
-        font-size: 12px;
-        margin-right: 3px;
-    }
-    
-    .comment-reply {
-        display: flex;
-        margin-top: 5px;
-        margin-left: 20px;
-        padding-left: 4px;
-        border-left: 2px solid #e9ebee;
-    }
-    
-    .comment-reply .comment-content {
-        flex-grow: 1;
-    }
-    
-    .comments-load-more {
-        text-align: center;
-        margin-top: 15px;
-    }
-    
-    .comments-load-more button {
-        background-color: #e9ebee;
-        border: 1px solid #ced0d4;
-        border-radius: 2px;
-        color: #4b4f56;
-        font-size: 12px;
-        font-weight: 600;
-        padding: 5px 10px;
-        cursor: pointer;
-        transition: background-color 0.15s ease;
-    }
-    
-    .comments-load-more button:hover {
-        background-color: #d8dade;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .comments-container {
-            padding: 10px;
-        }
-        
-        .comment-bubble p {
-            font-size: 13px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .comment-reply {
-            margin-left: 10px;
-        }
-    }
-</style>
     
     <footer>
         <div class="container">
-            <p>Copyright © 2025 Ted's Woodworking Blueprint Vault. All Rights Reserved.</p>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4 class="footer-heading">DIY Weekly</h4>
+                    <p style="color: #ccc; font-size: 14px; line-height: 1.5;">Your trusted source for all things related to DIY projects, woodworking, and home improvement.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Woodworking</a></li>
+                        <li><a href="#">Home Renovation</a></li>
+                        <li><a href="#">Tool Reviews</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Connect With Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Copyright © 2025 DIY Weekly. All Rights Reserved.</p>
+                <p style="margin-top: 10px; font-size: 12px;">This article contains affiliate links. DIY Weekly may earn a commission from purchases made through these links.</p>
+            </div>
         </div>
     </footer>
     
