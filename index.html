@@ -4,20 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIY SPOTLIGHT: Military Veteran Shares Woodworking Secrets That Save Thousands</title>
-    <!-- Taboola Pixel Code -->
-    <script type='text/javascript'>
-      window._tfa = window._tfa || [];
-      window._tfa.push({notify: 'event', name: 'page_view', id: 1833931});
-      !function (t, f, a, x) {
-             if (!document.getElementById(x)) {
-                t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
-             }
-      }(document.createElement('script'),
-      document.getElementsByTagName('script')[0],
-      '//cdn.taboola.com/libtrc/unip/1833931/tfa.js',
-      'tb_tfa_script');
-    </script>
-    <!-- End of Taboola Pixel Code -->
     <style>
         :root {
             --primary-color: #5d4037; /* Rich brown */
@@ -1278,33 +1264,7 @@
         // This simple version updates the display but doesn't actually count down
         // To make it fully functional, replace with a proper countdown to a specific date
         
-        // JavaScript to track engagement events and Taboola conversions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Track CTA clicks with delayed redirection
-            const ctaButtons = document.querySelectorAll('.cta-button, .sticky-cta');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    // Prevent default action
-                    e.preventDefault();
-                   
-                    console.log('CTA clicked: ' + this.textContent.trim());
-                   
-                    // Get the destination URL
-                    const destinationUrl = this.getAttribute('href');
-                   
-                    // Add Taboola conversion tracking
-                    if (window._tfa) {
-                        window._tfa.push({notify: 'event', name: 'Lead', id: 1833931});
-                        console.log('Taboola Lead conversion tracked');
-                    }
-                   
-                    // Wait a short moment for tracking to complete, then redirect
-                    setTimeout(function() {
-                        window.location.href = destinationUrl;
-                    }, 300); // 300ms delay
-                });
-            });
-        });
+        
     </script>
 </body>
 </html>
