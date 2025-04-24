@@ -52,6 +52,23 @@
             text-align: center;
             padding: 20px 0;
             border-bottom: 1px solid #eee;
+            position: relative;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #777;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .back-link:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
         }
         
         .logo {
@@ -73,6 +90,39 @@
         
         .main-content {
             padding: 30px 20px;
+        }
+        
+        .funnel-progress {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 30px;
+        }
+
+        .funnel-step {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .funnel-step.active {
+            color: var(--cta-color);
+            font-weight: bold;
+        }
+
+        .funnel-step:not(:last-child)::after {
+            content: "→";
+            margin: 0 10px;
+            color: #ccc;
+        }
+        
+        .story-connector {
+            background-color: #f9f7f3;
+            border-left: 3px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 25px;
+            font-style: italic;
+            color: #555;
         }
         
         .benefits {
@@ -167,11 +217,18 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
         
+        .guarantee-section {
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            background-color: #fffaf4;
+        }
+        
         .guarantee {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 30px 0;
         }
         
         .guarantee img {
@@ -212,6 +269,13 @@
             height: 90px;
         }
         
+        .final-step-note {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -235,12 +299,23 @@
 <body>
     <div class="container">
         <header>
+            <a href="index.html" class="back-link">« Back to details</a>
             <img src="images/teds logo.jpeg" alt="Ted's Woodworking" class="logo">
             <h1>ALMOST THERE: Your 16,000 Woodworking Plans Access</h1>
             <p class="subheading">Just one final step to unlock Ted's complete blueprint vault...</p>
         </header>
         
         <div class="main-content">
+            <div class="funnel-progress">
+                <div class="funnel-step">1. Learn</div>
+                <div class="funnel-step active">2. Preview</div>
+                <div class="funnel-step">3. Access</div>
+            </div>
+            
+            <div class="story-connector">
+                <p>As Jim mentioned in his story, these plans have already helped 20,000+ regular guys build professional-quality furniture without any prior woodworking experience. Even with bad knees and limited mobility, these step-by-step blueprints make it possible to create beautiful, useful projects your family will cherish.</p>
+            </div>
+            
             <p>You're seconds away from joining over 20,000 regular guys who are building professional-quality furniture without expensive tools or prior experience.</p>
             
             <div class="benefits">
@@ -279,14 +354,18 @@
                 
                 <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="cta-button">YES! GIVE ME INSTANT ACCESS NOW ➜</a>
                 
-                <p>Access is 100% secure and protected by 256-bit encryption</p>
+                <p class="final-step-note">This is the final step! Complete your secure order on the next page and get instant access to all 16,000 plans</p>
                 
-                <div class="guarantee">
-                    <img src="images/money back new.png" style="height:80px" alt="60-Day Guarantee">
-                    <div class="guarantee-text">
-                        <strong>60-Day Money Back Guarantee:</strong> If you're not completely satisfied with Ted's Woodworking plans, simply email for a full refund within 60 days. No questions asked.
+                <div class="guarantee-section">
+                    <div class="guarantee">
+                        <img src="images/money back new.png" style="height:80px" alt="60-Day Guarantee">
+                        <div class="guarantee-text">
+                            <strong>60-Day Money Back Guarantee:</strong> If you're not completely satisfied with Ted's Woodworking plans, simply email for a full refund within 60 days. No questions asked.
+                        </div>
                     </div>
                 </div>
+                
+                <p>Access is 100% secure and protected by 256-bit encryption</p>
                 
                 <div class="trust-badges">
                     <img src="images/secure.png" alt="Secure Checkout" class="trust-badge">
