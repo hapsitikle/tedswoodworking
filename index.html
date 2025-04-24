@@ -26,6 +26,7 @@
             --text-color: #3e2723; /* Dark brown for text */
             --light-gray: #efe8da; /* Beige like sawdust */
             --success-color: #7d5f49; /* Medium brown like stained pine */
+            --cta-color: #f57c00; /* Bright orange matching order page */
         }
         
         * {
@@ -291,22 +292,53 @@
         .cta-button {
             display: inline-block;
             padding: 18px 36px;
-            background-color: var(--secondary-color);
+            background-color: var(--cta-color);
             color: white;
             text-decoration: none;
             font-weight: bold;
             font-size: 20px;
             border-radius: 8px;
             text-align: center;
-            margin: 25px 0;
+            margin: 25px 0 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+            box-shadow: 0 4px 15px rgba(245, 124, 0, 0.3);
         }
         
         .cta-button:hover {
-            background-color: #d1232f;
+            background-color: #e65100;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+            box-shadow: 0 6px 20px rgba(245, 124, 0, 0.4);
+        }
+
+        .cta-note {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .funnel-progress {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 20px;
+        }
+
+        .funnel-step {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .funnel-step.active {
+            color: var(--cta-color);
+            font-weight: bold;
+        }
+
+        .funnel-step:not(:last-child)::after {
+            content: "→";
+            margin: 0 10px;
+            color: #ccc;
         }
         
         /* Sticky CTA Button */
@@ -317,7 +349,7 @@
             z-index: 100;
             display: inline-block;
             padding: 15px 25px;
-            background-color: var(--secondary-color);
+            background-color: var(--cta-color);
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -330,7 +362,7 @@
         }
         
         .sticky-cta:hover {
-            background-color: #d1232f;
+            background-color: #e65100;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
             animation: none;
@@ -357,6 +389,27 @@
             background-color: var(--accent-color);
             margin: 40px 0;
             border-radius: 8px;
+        }
+
+        .cta-extras {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .cta-extras .item {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .cta-extras .item:before {
+            content: "✓";
+            color: var(--cta-color);
+            font-weight: bold;
+            margin-right: 5px;
         }
         
         /* Images */
@@ -738,6 +791,45 @@
             text-align: center;
             margin-top: 15px;
         }
+
+        .mini-faq {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .mini-faq h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .faq-answer {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .back-to-top {
+            font-size: 14px;
+            text-align: center;
+            margin: 5px 0 15px;
+            color: #777;
+        }
+
+        .back-to-top a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
@@ -1025,8 +1117,19 @@
                 </div>
                 
                 <div class="cta-section">
+                    <div class="funnel-progress">
+                        <div class="funnel-step active">1. Learn</div>
+                        <div class="funnel-step">2. Preview</div>
+                        <div class="funnel-step">3. Access</div>
+                    </div>
                     <h3>Ready to Start Building Like a Pro?</h3>
                     <a href="pre-sell.html" class="cta-button" id="offer">Show Me How To Build Like A Pro »</a>
+                    <p class="cta-note">On the next page, you'll see exactly what you'll get before completing your secure order</p>
+                    <div class="cta-extras">
+                        <div class="item">One-time payment</div>
+                        <div class="item">60-day guarantee</div>
+                        <div class="item">Instant access</div>
+                    </div>
                 </div>
                 
                 <h2>URGENT: Why This Is About To Disappear</h2>
@@ -1072,10 +1175,27 @@
                 
                 <div class="cta-section">
                     <a href="pre-sell.html" class="cta-button">Unlock 16,000 Step-By-Step Woodworking Plans »</a>
+                    <p class="cta-note">On the next page, you'll complete your secure order and get instant access to all 16,000 plans</p>
                     
                     <p style="margin-top: 30px;"><strong>P.S.</strong> Ted is including FOUR special bonuses with every access pass, including his exclusive "Woodworking Secrets" video series ($197 value). These bonuses disappear when the new pricing takes effect.</p>
                     
                     <p style="margin-top: 20px;"><strong>P.P.S.</strong> Your purchase is protected by Ted's 60-day, 100% money-back guarantee. If you're not completely satisfied, simply email Ted for a full refund, no questions asked.</p>
+                    
+                    <div class="mini-faq">
+                        <h4>Frequently Asked Questions</h4>
+                        <div class="faq-item">
+                            <div class="faq-question">Do I need special tools to use these plans?</div>
+                            <div class="faq-answer">No, Ted's plans are designed for regular guys with basic tools. Each plan specifies exactly what you'll need.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">What if I have no woodworking experience?</div>
+                            <div class="faq-answer">The plans include a difficulty rating. Start with "beginner" projects to build confidence before tackling more complex builds.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">How do I access the plans after purchase?</div>
+                            <div class="faq-answer">Immediately after ordering, you'll get login details to access all 16,000+ plans from any device, anywhere.</div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Facebook-style Comments Section -->
