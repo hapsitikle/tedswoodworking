@@ -1,1 +1,292 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAIT! One More Step to Access Ted's 16,000 Woodworking Plans</title>
+    <style>
+        :root {
+            --primary-color: #5d4037; /* Rich brown */
+            --secondary-color: #d7892e; /* Warm amber/cedar */
+            --cta-color: #f57c00; /* Bright orange matching order page */
+            --text-color: #333;
+            --light-gray: #f5f2eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-gray);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logo {
+            max-width: 280px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .subheading {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .main-content {
+            padding: 30px 20px;
+        }
+        
+        .benefits {
+            margin: 25px 0;
+        }
+        
+        .benefits h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            padding-left: 30px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .social-proof {
+            background-color: #f9f7f3;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 25px 0;
+        }
+        
+        .testimonial {
+            border-left: 3px solid var(--secondary-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            font-style: normal;
+            text-align: right;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .price-compare {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .regular-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        .sale-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .cta-button {
+            display: block;
+            background-color: var(--cta-color);
+            color: white;
+            text-decoration: none;
+            padding: 20px 30px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #e65100;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .guarantee img {
+            width: 80px;
+            margin-right: 15px;
+        }
+        
+        .guarantee-text {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .urgency {
+            background-color: #fff3e0;
+            border: 1px dashed #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #e65100;
+        }
+        
+        .timer {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #d32f2f;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            margin: 0 10px;
+            height: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .subheading {
+                font-size: 16px;
+            }
+            
+            .cta-button {
+                font-size: 18px;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/api/placeholder/280/80" alt="Ted's Woodworking" class="logo">
+            <h1>ALMOST THERE: Your 16,000 Woodworking Plans Access</h1>
+            <p class="subheading">Just one final step to unlock Ted's complete blueprint vault...</p>
+        </header>
+        
+        <div class="main-content">
+            <p>You're seconds away from joining over 20,000 regular guys who are building professional-quality furniture without expensive tools or prior experience.</p>
+            
+            <div class="benefits">
+                <h2>Here's what you're about to receive:</h2>
+                <ul class="benefits-list">
+                    <li><strong>All 16,000+ step-by-step woodworking plans</strong> with detailed instructions and materials lists</li>
+                    <li><strong>DWG & CAD Plan Viewer</strong> ($47 value included FREE)</li>
+                    <li><strong>150 Premium Woodworking Videos</strong> showing exactly how to complete projects</li>
+                    <li><strong>Lifetime Updates</strong> with new plans released every month</li>
+                    <li><strong>100% Money-Back Guarantee</strong> for 60 full days</li>
+                </ul>
+            </div>
+            
+            <div class="social-proof">
+                <div class="testimonial">
+                    "I built a backyard shed that saved me $3,200 vs contractor quotes. The plans were so clear that even with my bad knees and limited experience, I finished it in a weekend."
+                    <div class="testimonial-author">- Robert, 61, Chicago</div>
+                </div>
+                
+                <div class="testimonial">
+                    "Ted's blueprints completely changed my retirement. I've built an entire bedroom set that would have cost $3,200 retail for just $340 in materials."
+                    <div class="testimonial-author">- John, 53, Texas</div>
+                </div>
+            </div>
+            
+            <div class="urgency">
+                WARNING: Ted is increasing the price from $67 to $197 very soon!
+                <div class="timer">Limited Time Offer</div>
+            </div>
+            
+            <div class="cta-section">
+                <div class="price-compare">
+                    <span class="regular-price">Regular Price: $297</span><br>
+                    <span class="sale-price">Today Only: $67</span>
+                </div>
+                
+                <a href="https://hop.clickbank.net/?affiliate=kangaeru&vendor=tedsplans" class="cta-button">YES! GIVE ME INSTANT ACCESS NOW ➜</a>
+                
+                <p>Access is 100% secure and protected by 256-bit encryption</p>
+                
+                <div class="guarantee">
+                    <img src="/api/placeholder/80/80" alt="60-Day Guarantee">
+                    <div class="guarantee-text">
+                        <strong>60-Day Money Back Guarantee:</strong> If you're not completely satisfied with Ted's Woodworking plans, simply email for a full refund within 60 days. No questions asked.
+                    </div>
+                </div>
+                
+                <div class="trust-badges">
+                    <img src="/api/placeholder/120/40" alt="Secure Checkout" class="trust-badge">
+                    <img src="/api/placeholder/120/40" alt="ClickBank Trusted" class="trust-badge">
+                    <img src="/api/placeholder/120/40" alt="Satisfaction Guaranteed" class="trust-badge">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple JavaScript for a fake countdown timer could be added here
+        // This creates a sense of urgency without being deceptive
+    </script>
+</body>
+</html>
